@@ -1,0 +1,10 @@
+C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\bin\Debug\BilliardClubManage.exe.config
+C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\bin\Debug\BilliardClubManage.exe
+C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\bin\Debug\BilliardClubManage.pdb
+C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\obj\Debug\BilliardClubManage.csproj.AssemblyReference.cache
+C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\obj\Debug\BilliardClubManage.frmLogin.resources
+C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\obj\Debug\BilliardClubManage.Properties.Resources.resources
+C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\obj\Debug\BilliardClubManage.csproj.GenerateResource.cache
+C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\obj\Debug\BilliardClubManage.csproj.CoreCompileInputs.cache
+C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\obj\Debug\BilliardClubManage.exe
+C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\obj\Debug\BilliardClubManage.pdb
