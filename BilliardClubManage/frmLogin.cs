@@ -16,5 +16,19 @@ namespace BilliardClubManage
         {
             InitializeComponent();
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            //thieu ham if kiem tra tai khoan
+            frmMain main = new frmMain();
+            this.Hide();
+            main.ShowDialog();
+            this.Show();
+        }
     }
 }
