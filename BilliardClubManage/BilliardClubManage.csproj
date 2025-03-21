@@ -75,6 +75,29 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BilliardBUS\BanBUS.cs" />
+    <Compile Include="BilliardBUS\DoanhthuBUS.cs" />
+    <Compile Include="BilliardBUS\HanghoaBUS.cs" />
+    <Compile Include="BilliardBUS\KhachhangBUS.cs" />
+    <Compile Include="BilliardBUS\KhoBUS.cs" />
+    <Compile Include="BilliardBUS\NhanvienBUS.cs" />
+    <Compile Include="BilliardClubDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BilliardClubDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BilliardDAO\BanDAO.cs" />
+    <Compile Include="BilliardDAO\DataProvider.cs" />
+    <Compile Include="BilliardDAO\HanghoaDAO.cs" />
+    <Compile Include="BilliardDAO\KhachhangDAO.cs" />
+    <Compile Include="BilliardDAO\KhoDAO.cs" />
+    <Compile Include="BilliardDAO\NhanvienDAO.cs" />
+    <Compile Include="BilliardDTO\Ban.cs" />
+    <Compile Include="BilliardDTO\Doanhthu.cs" />
+    <Compile Include="BilliardDTO\Hanghoa.cs" />
+    <Compile Include="BilliardDTO\Hoadon.cs" />
+    <Compile Include="BilliardDTO\Khachhang.cs" />
+    <Compile Include="BilliardDTO\Nhanvien.cs" />
     <Compile Include="frmInfoHanghoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +227,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="BilliardClubDataSet.xsc">
+      <DependentUpon>BilliardClubDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BilliardClubDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BilliardClubDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BilliardClubDataSet.xss">
+      <DependentUpon>BilliardClubDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -251,5 +285,6 @@
   <ItemGroup>
     <None Include="Resources\order-food.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

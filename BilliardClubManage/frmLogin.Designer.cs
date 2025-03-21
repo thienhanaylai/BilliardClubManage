@@ -119,7 +119,7 @@
             // 
             this.txtPw.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPw.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPw.ForeColor = System.Drawing.Color.Gray;
+            this.txtPw.ForeColor = System.Drawing.Color.Black;
             this.txtPw.Location = new System.Drawing.Point(50, 300);
             this.txtPw.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPw.MinimumSize = new System.Drawing.Size(1, 16);
@@ -137,7 +137,7 @@
             // 
             this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.ForeColor = System.Drawing.Color.Gray;
+            this.txtID.ForeColor = System.Drawing.Color.Black;
             this.txtID.Location = new System.Drawing.Point(50, 150);
             this.txtID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtID.MinimumSize = new System.Drawing.Size(1, 16);
@@ -188,8 +188,8 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AcceptButton = this.btnLogin;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Aquamarine;
             this.ClientSize = new System.Drawing.Size(1424, 985);
