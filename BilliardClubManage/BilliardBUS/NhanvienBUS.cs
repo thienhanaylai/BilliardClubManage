@@ -26,5 +26,10 @@ namespace BilliardClubBUS
         {
             return new NhanvienDAO().getNVbyID(id);
         }
+
+        public static bool insertNV(string id, string ho, string ten, DateTime ngaysinh, bool gioitinh, string chucvu, string matkhau)
+        {
+            return new NhanvienDAO().insertNV(id, ho, ten, ngaysinh, gioitinh, chucvu, matkhau);
+        }
     }
 }

@@ -55,7 +55,12 @@ namespace BilliardClubManage
 
         private void btnQuanly_Click(object sender, EventArgs e)
         {
-            OpenFormChild(new frmQuanly());
+            if(nhanvien.Chucvu == "admin")
+                OpenFormChild(new frmQuanly());
+            else
+                {
+                MessageBox.Show("Vui long dang nhap tai khoan admin !");
+            }
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -63,7 +68,7 @@ namespace BilliardClubManage
             btnBan.Selected = true;
             OpenFormChild(new frmBan());
             lbTennv.Text = nhanvien.Hoten;
-           lbChucvu.Text = nhanvien.Chucvu;
+            lbChucvu.Text = nhanvien.Chucvu;
         }
     }
 }

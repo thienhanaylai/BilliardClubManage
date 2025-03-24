@@ -30,7 +30,7 @@
         {
             this.uiButton2 = new Sunny.UI.UIButton();
             this.uiButton3 = new Sunny.UI.UIButton();
-            this.uiFlowLayoutPanel1 = new Sunny.UI.UIFlowLayoutPanel();
+            this.dsBan = new Sunny.UI.UIPanel();
             this.SuspendLayout();
             // 
             // uiButton2
@@ -59,19 +59,16 @@
             this.uiButton3.Text = "Khu 2";
             this.uiButton3.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             // 
-            // uiFlowLayoutPanel1
+            // dsBan
             // 
-            this.uiFlowLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiFlowLayoutPanel1.Location = new System.Drawing.Point(12, 80);
-            this.uiFlowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiFlowLayoutPanel1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiFlowLayoutPanel1.Name = "uiFlowLayoutPanel1";
-            this.uiFlowLayoutPanel1.Padding = new System.Windows.Forms.Padding(2);
-            this.uiFlowLayoutPanel1.ShowText = false;
-            this.uiFlowLayoutPanel1.Size = new System.Drawing.Size(1378, 774);
-            this.uiFlowLayoutPanel1.TabIndex = 5;
-            this.uiFlowLayoutPanel1.Text = "uiFlowLayoutPanel1";
-            this.uiFlowLayoutPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dsBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dsBan.Location = new System.Drawing.Point(11, 80);
+            this.dsBan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dsBan.MinimumSize = new System.Drawing.Size(1, 1);
+            this.dsBan.Name = "dsBan";
+            this.dsBan.Size = new System.Drawing.Size(1378, 774);
+            this.dsBan.TabIndex = 5;
+            this.dsBan.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmBan
             // 
@@ -79,7 +76,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1402, 868);
-            this.Controls.Add(this.uiFlowLayoutPanel1);
+            this.Controls.Add(this.dsBan);
             this.Controls.Add(this.uiButton3);
             this.Controls.Add(this.uiButton2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -95,6 +92,6 @@
         #endregion
         private Sunny.UI.UIButton uiButton2;
         private Sunny.UI.UIButton uiButton3;
-        private Sunny.UI.UIFlowLayoutPanel uiFlowLayoutPanel1;
+        private Sunny.UI.UIPanel dsBan;
     }
 }

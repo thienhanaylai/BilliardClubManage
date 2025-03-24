@@ -150,6 +150,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmQuanly";
             this.Text = "frmQuanly";
+            this.Load += new System.EventHandler(this.frmQuanly_Load);
             this.uiPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

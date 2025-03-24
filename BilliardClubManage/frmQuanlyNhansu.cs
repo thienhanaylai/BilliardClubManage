@@ -20,13 +20,15 @@ namespace BilliardClubManage
 
         private void btnThemnv_Click(object sender, EventArgs e)
         {
-            frmInfoNv addnv = new frmInfoNv();
+            int type = 0;
+            frmInfoNv addnv = new frmInfoNv(type);
             addnv.ShowDialog();
         }
 
         private void btnSuanv_Click(object sender, EventArgs e)
         {
-            frmInfoNv info = new frmInfoNv();
+            int type = 1;
+            frmInfoNv info = new frmInfoNv(type);
             info.ShowDialog();
             //còn thiếu hàm đổ data của nhân viên được chọn trong datagirdview vào form info
         }

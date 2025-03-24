@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.uiPanel1 = new Sunny.UI.UIPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
-            this.uiComboBox1 = new Sunny.UI.UIComboBox();
-            this.uiTextBox5 = new Sunny.UI.UITextBox();
-            this.uiTextBox4 = new Sunny.UI.UITextBox();
-            this.uiRadioButton2 = new Sunny.UI.UIRadioButton();
-            this.uiRadioButton1 = new Sunny.UI.UIRadioButton();
-            this.uiTextBox3 = new Sunny.UI.UITextBox();
+            this.btnClear = new Sunny.UI.UIButton();
+            this.dtpBirthdate = new System.Windows.Forms.DateTimePicker();
+            this.btnExit = new Sunny.UI.UISymbolButton();
+            this.slChucvu = new Sunny.UI.UIComboBox();
+            this.txtRePw = new Sunny.UI.UITextBox();
+            this.txtPw = new Sunny.UI.UITextBox();
+            this.rdNu = new Sunny.UI.UIRadioButton();
+            this.rdNam = new Sunny.UI.UIRadioButton();
+            this.txtTen = new Sunny.UI.UITextBox();
             this.uiLabel9 = new Sunny.UI.UILabel();
-            this.uiTextBox2 = new Sunny.UI.UITextBox();
+            this.txtHo = new Sunny.UI.UITextBox();
             this.uiLabel8 = new Sunny.UI.UILabel();
             this.uiLabel7 = new Sunny.UI.UILabel();
             this.uiLabel6 = new Sunny.UI.UILabel();
@@ -47,26 +48,25 @@
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
-            this.uiButton5 = new Sunny.UI.UIButton();
-            this.uiButton1 = new Sunny.UI.UIButton();
+            this.txtID = new Sunny.UI.UITextBox();
+            this.btnXacnhan = new Sunny.UI.UIButton();
             this.uiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiPanel1
             // 
             this.uiPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.uiPanel1.Controls.Add(this.uiButton1);
-            this.uiPanel1.Controls.Add(this.dateTimePicker1);
-            this.uiPanel1.Controls.Add(this.uiSymbolButton1);
-            this.uiPanel1.Controls.Add(this.uiComboBox1);
-            this.uiPanel1.Controls.Add(this.uiTextBox5);
-            this.uiPanel1.Controls.Add(this.uiTextBox4);
-            this.uiPanel1.Controls.Add(this.uiRadioButton2);
-            this.uiPanel1.Controls.Add(this.uiRadioButton1);
-            this.uiPanel1.Controls.Add(this.uiTextBox3);
+            this.uiPanel1.Controls.Add(this.btnClear);
+            this.uiPanel1.Controls.Add(this.dtpBirthdate);
+            this.uiPanel1.Controls.Add(this.btnExit);
+            this.uiPanel1.Controls.Add(this.slChucvu);
+            this.uiPanel1.Controls.Add(this.txtRePw);
+            this.uiPanel1.Controls.Add(this.txtPw);
+            this.uiPanel1.Controls.Add(this.rdNu);
+            this.uiPanel1.Controls.Add(this.rdNam);
+            this.uiPanel1.Controls.Add(this.txtTen);
             this.uiPanel1.Controls.Add(this.uiLabel9);
-            this.uiPanel1.Controls.Add(this.uiTextBox2);
+            this.uiPanel1.Controls.Add(this.txtHo);
             this.uiPanel1.Controls.Add(this.uiLabel8);
             this.uiPanel1.Controls.Add(this.uiLabel7);
             this.uiPanel1.Controls.Add(this.uiLabel6);
@@ -75,8 +75,8 @@
             this.uiPanel1.Controls.Add(this.uiLabel3);
             this.uiPanel1.Controls.Add(this.uiLabel2);
             this.uiPanel1.Controls.Add(this.uiLabel1);
-            this.uiPanel1.Controls.Add(this.uiTextBox1);
-            this.uiPanel1.Controls.Add(this.uiButton5);
+            this.uiPanel1.Controls.Add(this.txtID);
+            this.uiPanel1.Controls.Add(this.btnXacnhan);
             this.uiPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(234)))), ((int)(((byte)(218)))));
             this.uiPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiPanel1.Location = new System.Drawing.Point(0, 0);
@@ -89,138 +89,154 @@
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dateTimePicker1
+            // btnClear
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(516, 332);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(203, 32);
-            this.dateTimePicker1.TabIndex = 31;
+            this.btnClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClear.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(739, 628);
+            this.btnClear.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Radius = 35;
+            this.btnClear.Size = new System.Drawing.Size(164, 54);
+            this.btnClear.TabIndex = 32;
+            this.btnClear.Text = "Nhập lại";
+            this.btnClear.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             // 
-            // uiSymbolButton1
+            // dtpBirthdate
             // 
-            this.uiSymbolButton1.BackColor = System.Drawing.Color.Transparent;
-            this.uiSymbolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.uiSymbolButton1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiSymbolButton1.Location = new System.Drawing.Point(20, 20);
-            this.uiSymbolButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolButton1.Name = "uiSymbolButton1";
-            this.uiSymbolButton1.Radius = 35;
-            this.uiSymbolButton1.Size = new System.Drawing.Size(121, 60);
-            this.uiSymbolButton1.Symbol = 61536;
-            this.uiSymbolButton1.SymbolSize = 48;
-            this.uiSymbolButton1.TabIndex = 10;
-            this.uiSymbolButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiSymbolButton1.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.dtpBirthdate.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpBirthdate.Location = new System.Drawing.Point(516, 332);
+            this.dtpBirthdate.Name = "dtpBirthdate";
+            this.dtpBirthdate.Size = new System.Drawing.Size(203, 32);
+            this.dtpBirthdate.TabIndex = 31;
             // 
-            // uiComboBox1
+            // btnExit
             // 
-            this.uiComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.uiComboBox1.DataSource = null;
-            this.uiComboBox1.FillColor = System.Drawing.Color.White;
-            this.uiComboBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiComboBox1.ItemHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.uiComboBox1.Items.AddRange(new object[] {
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnExit.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(20, 20);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(5);
+            this.btnExit.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Radius = 35;
+            this.btnExit.Size = new System.Drawing.Size(121, 60);
+            this.btnExit.Symbol = 61536;
+            this.btnExit.SymbolSize = 48;
+            this.btnExit.TabIndex = 10;
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            // 
+            // slChucvu
+            // 
+            this.slChucvu.BackColor = System.Drawing.Color.Transparent;
+            this.slChucvu.DataSource = null;
+            this.slChucvu.FillColor = System.Drawing.Color.White;
+            this.slChucvu.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slChucvu.ItemHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+            this.slChucvu.Items.AddRange(new object[] {
             "Nhân viên",
             "Quản lý"});
-            this.uiComboBox1.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.uiComboBox1.Location = new System.Drawing.Point(856, 324);
-            this.uiComboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiComboBox1.MinimumSize = new System.Drawing.Size(63, 0);
-            this.uiComboBox1.Name = "uiComboBox1";
-            this.uiComboBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBox1.Size = new System.Drawing.Size(218, 40);
-            this.uiComboBox1.SymbolSize = 24;
-            this.uiComboBox1.TabIndex = 30;
-            this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiComboBox1.Watermark = "Chức vụ";
+            this.slChucvu.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.slChucvu.Location = new System.Drawing.Point(856, 324);
+            this.slChucvu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.slChucvu.MinimumSize = new System.Drawing.Size(63, 0);
+            this.slChucvu.Name = "slChucvu";
+            this.slChucvu.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.slChucvu.Size = new System.Drawing.Size(218, 40);
+            this.slChucvu.SymbolSize = 24;
+            this.slChucvu.TabIndex = 30;
+            this.slChucvu.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.slChucvu.Watermark = "Chức vụ";
             // 
-            // uiTextBox5
+            // txtRePw
             // 
-            this.uiTextBox5.BackColor = System.Drawing.Color.Transparent;
-            this.uiTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTextBox5.Location = new System.Drawing.Point(370, 543);
-            this.uiTextBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox5.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox5.Name = "uiTextBox5";
-            this.uiTextBox5.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox5.PasswordChar = '*';
-            this.uiTextBox5.Radius = 35;
-            this.uiTextBox5.ShowText = false;
-            this.uiTextBox5.Size = new System.Drawing.Size(703, 50);
-            this.uiTextBox5.TabIndex = 20;
-            this.uiTextBox5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox5.Watermark = "Nhập lại mật khẩu";
-            this.uiTextBox5.WatermarkActiveColor = System.Drawing.Color.Silver;
-            this.uiTextBox5.WordWarp = false;
+            this.txtRePw.BackColor = System.Drawing.Color.Transparent;
+            this.txtRePw.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRePw.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtRePw.Location = new System.Drawing.Point(370, 543);
+            this.txtRePw.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRePw.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtRePw.Name = "txtRePw";
+            this.txtRePw.Padding = new System.Windows.Forms.Padding(5);
+            this.txtRePw.PasswordChar = '*';
+            this.txtRePw.Radius = 35;
+            this.txtRePw.ShowText = false;
+            this.txtRePw.Size = new System.Drawing.Size(703, 50);
+            this.txtRePw.TabIndex = 20;
+            this.txtRePw.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtRePw.Watermark = "Nhập lại mật khẩu";
+            this.txtRePw.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtRePw.WordWarp = false;
             // 
-            // uiTextBox4
+            // txtPw
             // 
-            this.uiTextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.uiTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTextBox4.Location = new System.Drawing.Point(370, 430);
-            this.uiTextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox4.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox4.Name = "uiTextBox4";
-            this.uiTextBox4.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox4.PasswordChar = '*';
-            this.uiTextBox4.Radius = 35;
-            this.uiTextBox4.ShowText = false;
-            this.uiTextBox4.Size = new System.Drawing.Size(703, 50);
-            this.uiTextBox4.TabIndex = 19;
-            this.uiTextBox4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox4.Watermark = "Mật khẩu";
-            this.uiTextBox4.WatermarkActiveColor = System.Drawing.Color.Silver;
-            this.uiTextBox4.WordWarp = false;
+            this.txtPw.BackColor = System.Drawing.Color.Transparent;
+            this.txtPw.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPw.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPw.Location = new System.Drawing.Point(370, 430);
+            this.txtPw.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPw.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtPw.Name = "txtPw";
+            this.txtPw.Padding = new System.Windows.Forms.Padding(5);
+            this.txtPw.PasswordChar = '*';
+            this.txtPw.Radius = 35;
+            this.txtPw.ShowText = false;
+            this.txtPw.Size = new System.Drawing.Size(703, 50);
+            this.txtPw.TabIndex = 19;
+            this.txtPw.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtPw.Watermark = "Mật khẩu";
+            this.txtPw.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtPw.WordWarp = false;
             // 
-            // uiRadioButton2
+            // rdNu
             // 
-            this.uiRadioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.uiRadioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiRadioButton2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiRadioButton2.Location = new System.Drawing.Point(727, 263);
-            this.uiRadioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.uiRadioButton2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiRadioButton2.Name = "uiRadioButton2";
-            this.uiRadioButton2.Size = new System.Drawing.Size(150, 50);
-            this.uiRadioButton2.TabIndex = 28;
-            this.uiRadioButton2.Text = "Nữ";
+            this.rdNu.BackColor = System.Drawing.Color.Transparent;
+            this.rdNu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdNu.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdNu.Location = new System.Drawing.Point(727, 263);
+            this.rdNu.Margin = new System.Windows.Forms.Padding(0);
+            this.rdNu.MinimumSize = new System.Drawing.Size(1, 1);
+            this.rdNu.Name = "rdNu";
+            this.rdNu.Size = new System.Drawing.Size(150, 50);
+            this.rdNu.TabIndex = 28;
+            this.rdNu.Text = "Nữ";
             // 
-            // uiRadioButton1
+            // rdNam
             // 
-            this.uiRadioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.uiRadioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiRadioButton1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiRadioButton1.Location = new System.Drawing.Point(550, 263);
-            this.uiRadioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.uiRadioButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiRadioButton1.Name = "uiRadioButton1";
-            this.uiRadioButton1.Size = new System.Drawing.Size(150, 50);
-            this.uiRadioButton1.TabIndex = 27;
-            this.uiRadioButton1.Text = "Nam";
+            this.rdNam.BackColor = System.Drawing.Color.Transparent;
+            this.rdNam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rdNam.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdNam.Location = new System.Drawing.Point(550, 263);
+            this.rdNam.Margin = new System.Windows.Forms.Padding(0);
+            this.rdNam.MinimumSize = new System.Drawing.Size(1, 1);
+            this.rdNam.Name = "rdNam";
+            this.rdNam.Size = new System.Drawing.Size(150, 50);
+            this.rdNam.TabIndex = 27;
+            this.rdNam.Text = "Nam";
             // 
-            // uiTextBox3
+            // txtTen
             // 
-            this.uiTextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.uiTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTextBox3.Location = new System.Drawing.Point(727, 196);
-            this.uiTextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox3.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox3.Name = "uiTextBox3";
-            this.uiTextBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox3.Radius = 35;
-            this.uiTextBox3.ShowText = false;
-            this.uiTextBox3.Size = new System.Drawing.Size(350, 50);
-            this.uiTextBox3.TabIndex = 19;
-            this.uiTextBox3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox3.Watermark = "Nhập tên";
-            this.uiTextBox3.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtTen.BackColor = System.Drawing.Color.Transparent;
+            this.txtTen.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTen.Location = new System.Drawing.Point(727, 196);
+            this.txtTen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTen.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Padding = new System.Windows.Forms.Padding(5);
+            this.txtTen.Radius = 35;
+            this.txtTen.ShowText = false;
+            this.txtTen.Size = new System.Drawing.Size(350, 50);
+            this.txtTen.TabIndex = 19;
+            this.txtTen.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtTen.Watermark = "Nhập tên";
+            this.txtTen.WatermarkActiveColor = System.Drawing.Color.Silver;
             // 
             // uiLabel9
             // 
@@ -236,23 +252,23 @@
             this.uiLabel9.Text = "Tên:";
             this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // uiTextBox2
+            // txtHo
             // 
-            this.uiTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.uiTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTextBox2.Location = new System.Drawing.Point(374, 196);
-            this.uiTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox2.Name = "uiTextBox2";
-            this.uiTextBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox2.Radius = 35;
-            this.uiTextBox2.ShowText = false;
-            this.uiTextBox2.Size = new System.Drawing.Size(345, 50);
-            this.uiTextBox2.TabIndex = 18;
-            this.uiTextBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox2.Watermark = "Nhập họ";
-            this.uiTextBox2.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtHo.BackColor = System.Drawing.Color.Transparent;
+            this.txtHo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtHo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtHo.Location = new System.Drawing.Point(374, 196);
+            this.txtHo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtHo.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtHo.Name = "txtHo";
+            this.txtHo.Padding = new System.Windows.Forms.Padding(5);
+            this.txtHo.Radius = 35;
+            this.txtHo.ShowText = false;
+            this.txtHo.Size = new System.Drawing.Size(345, 50);
+            this.txtHo.TabIndex = 18;
+            this.txtHo.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtHo.Watermark = "Nhập họ";
+            this.txtHo.WatermarkActiveColor = System.Drawing.Color.Silver;
             // 
             // uiLabel8
             // 
@@ -364,61 +380,47 @@
             this.uiLabel1.Text = "Thông tin nhân viên";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // uiTextBox1
+            // txtID
             // 
-            this.uiTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTextBox1.Location = new System.Drawing.Point(374, 93);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox1.Radius = 35;
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(700, 50);
-            this.uiTextBox1.TabIndex = 17;
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.Watermark = "Nhập ID";
-            this.uiTextBox1.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtID.BackColor = System.Drawing.Color.Transparent;
+            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtID.Location = new System.Drawing.Point(374, 93);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtID.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtID.Name = "txtID";
+            this.txtID.Padding = new System.Windows.Forms.Padding(5);
+            this.txtID.Radius = 35;
+            this.txtID.ShowText = false;
+            this.txtID.Size = new System.Drawing.Size(700, 50);
+            this.txtID.TabIndex = 17;
+            this.txtID.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtID.Watermark = "Nhập ID";
+            this.txtID.WatermarkActiveColor = System.Drawing.Color.Silver;
             // 
-            // uiButton5
+            // btnXacnhan
             // 
-            this.uiButton5.BackColor = System.Drawing.Color.Transparent;
-            this.uiButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.uiButton5.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiButton5.Location = new System.Drawing.Point(909, 628);
-            this.uiButton5.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton5.Name = "uiButton5";
-            this.uiButton5.Radius = 35;
-            this.uiButton5.Size = new System.Drawing.Size(164, 54);
-            this.uiButton5.TabIndex = 16;
-            this.uiButton5.Text = "Xác nhận";
-            this.uiButton5.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            // 
-            // uiButton1
-            // 
-            this.uiButton1.BackColor = System.Drawing.Color.Transparent;
-            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.uiButton1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiButton1.Location = new System.Drawing.Point(739, 628);
-            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton1.Name = "uiButton1";
-            this.uiButton1.Radius = 35;
-            this.uiButton1.Size = new System.Drawing.Size(164, 54);
-            this.uiButton1.TabIndex = 32;
-            this.uiButton1.Text = "Nhập lại";
-            this.uiButton1.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnXacnhan.BackColor = System.Drawing.Color.Transparent;
+            this.btnXacnhan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXacnhan.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnXacnhan.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacnhan.Location = new System.Drawing.Point(909, 628);
+            this.btnXacnhan.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnXacnhan.Name = "btnXacnhan";
+            this.btnXacnhan.Radius = 35;
+            this.btnXacnhan.Size = new System.Drawing.Size(164, 54);
+            this.btnXacnhan.TabIndex = 16;
+            this.btnXacnhan.Text = "Xác nhận";
+            this.btnXacnhan.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
             // frmInfoNv
             // 
-            this.AcceptButton = this.uiButton5;
+            this.AcceptButton = this.btnXacnhan;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CancelButton = this.uiSymbolButton1;
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(1353, 713);
             this.Controls.Add(this.uiPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -440,22 +442,22 @@
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UITextBox uiTextBox1;
-        private Sunny.UI.UIButton uiButton5;
+        private Sunny.UI.UITextBox txtID;
+        private Sunny.UI.UIButton btnXacnhan;
         private Sunny.UI.UILabel uiLabel8;
         private Sunny.UI.UILabel uiLabel7;
         private Sunny.UI.UILabel uiLabel6;
         private Sunny.UI.UILabel uiLabel5;
-        private Sunny.UI.UITextBox uiTextBox2;
-        private Sunny.UI.UITextBox uiTextBox3;
+        private Sunny.UI.UITextBox txtHo;
+        private Sunny.UI.UITextBox txtTen;
         private Sunny.UI.UILabel uiLabel9;
-        private Sunny.UI.UIRadioButton uiRadioButton2;
-        private Sunny.UI.UIRadioButton uiRadioButton1;
-        private Sunny.UI.UITextBox uiTextBox5;
-        private Sunny.UI.UITextBox uiTextBox4;
-        private Sunny.UI.UIComboBox uiComboBox1;
-        private Sunny.UI.UISymbolButton uiSymbolButton1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private Sunny.UI.UIButton uiButton1;
+        private Sunny.UI.UIRadioButton rdNu;
+        private Sunny.UI.UIRadioButton rdNam;
+        private Sunny.UI.UITextBox txtRePw;
+        private Sunny.UI.UITextBox txtPw;
+        private Sunny.UI.UIComboBox slChucvu;
+        private Sunny.UI.UISymbolButton btnExit;
+        private System.Windows.Forms.DateTimePicker dtpBirthdate;
+        private Sunny.UI.UIButton btnClear;
     }
 }

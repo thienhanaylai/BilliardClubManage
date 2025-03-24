@@ -52,5 +52,10 @@ namespace BilliardClubManage
         {
             OpenFormChild(new frmQuanlyban());
         }
+
+        private void frmQuanly_Load(object sender, EventArgs e)
+        {
+            OpenFormChild(new frmQuanlyDoanhthu());
+        }
     }
 }

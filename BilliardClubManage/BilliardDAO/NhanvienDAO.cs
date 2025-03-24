@@ -66,18 +66,35 @@ namespace BilliardClubManage.BilliardDAO
             Nhanvien nv = new Nhanvien();
             if (rd.Read())
             {
-                nv.IDnv = rd.GetString(0);
-                string Ho = rd.GetString(1);
-                string Ten = rd.GetString(2);
+                nv.IDnv = rd.GetString(0).Trim();
+                string Ho = rd.GetString(1).Trim();
+                string Ten = rd.GetString(2).Trim();
                 nv.Hoten = Ho + " " + Ten;
                 nv.Ngaysinh = rd.GetDateTime(3);
                 nv.Gioitinh = rd.GetBoolean(4);
-                nv.Chucvu = rd.GetString(5);
-                nv.Matkhau = rd.GetString(6);
+                nv.Chucvu = rd.GetString(5).Trim();
+                nv.Matkhau = rd.GetString(6).Trim();
             }
             return nv;
         }
 
+        public bool insertNV(string id, string ho, string ten, DateTime ngaysinh, bool gioitinh, string chucvu, string matkhau)
+        {
+            string sql = "insert into Nhanvien values(N'" + id + "',N'" + ho + "', N'" + ten +"',N'" + ngaysinh + "',N'" + gioitinh + "',N'" + chucvu + "',N'" + matkhau + "')";
+            dataProvider.Connect();
+            int flag = dataProvider.ExecuteNonQuery(sql);
+            if(flag > 0)
+            {
+                dataProvider.Close();
+                return true;
+            }
+            else
+            {
+                dataProvider.Close();
+                return false;
+            }
+            
+        }
 
     }
 }

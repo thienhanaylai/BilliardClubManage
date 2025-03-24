@@ -17,14 +17,27 @@ namespace BilliardClubManage
             InitializeComponent();
         }
 
-        private void uiSymbolButton1_Click(object sender, EventArgs e)
-        {
+        private Form crtFormChild;
 
+        private void OpenFormChild(Form formChild)
+        {
+            if (crtFormChild != null)
+            {
+                crtFormChild.Close();
+            }
+            crtFormChild = formChild;
+            formChild.TopLevel = false;
+            formChild.FormBorderStyle = FormBorderStyle.None;
+            formChild.Dock = DockStyle.Fill;
+            dsBan.Controls.Add(formChild);
+            dsBan.Tag = formChild;
+            formChild.BringToFront();
+            formChild.Show();
         }
 
         private void frmBan_Load(object sender, EventArgs e)
         {
-
+            OpenFormChild(new frmListBan());
         }
     }
 }

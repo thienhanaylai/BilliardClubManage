@@ -93,7 +93,6 @@
     <Compile Include="BilliardDAO\KhoDAO.cs" />
     <Compile Include="BilliardDAO\NhanvienDAO.cs" />
     <Compile Include="BilliardDTO\Ban.cs" />
-    <Compile Include="BilliardDTO\Doanhthu.cs" />
     <Compile Include="BilliardDTO\Hanghoa.cs" />
     <Compile Include="BilliardDTO\Hoadon.cs" />
     <Compile Include="BilliardDTO\Khachhang.cs" />
@@ -115,6 +114,12 @@
     </Compile>
     <Compile Include="frmBan.Designer.cs">
       <DependentUpon>frmBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListBan.Designer.cs">
+      <DependentUpon>frmListBan.cs</DependentUpon>
     </Compile>
     <Compile Include="frmQuanlyDoanhthu.cs">
       <SubType>Form</SubType>
@@ -186,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBan.resx">
       <DependentUpon>frmBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListBan.resx">
+      <DependentUpon>frmListBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanlyDoanhthu.resx">
       <DependentUpon>frmQuanlyDoanhthu.cs</DependentUpon>

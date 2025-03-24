@@ -38,11 +38,11 @@ namespace BilliardClubManage.BilliardDAO
             return cmd.ExecuteReader();
         }
 
-        public void ExecuteNonQuery(string sql)
+        public int ExecuteNonQuery(string sql)
         {
             //thực thi câu lệnh sql không trả về giá trị
             cmd = new SqlCommand(sql, connect);
-            cmd.ExecuteNonQuery();
+            return cmd.ExecuteNonQuery();
         }
     }
 }
