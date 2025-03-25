@@ -28,8 +28,8 @@ namespace BilliardClubManage
         private void btnLogin_Click(object sender, EventArgs e)
         {
            
-            string id = txtID.Text;
-            string pw = txtPw.Text;
+            string id = txtID.Text.Trim();
+            string pw = txtPw.Text.Trim();
             if (BilliardClubBUS.NhanvienBUS.validateNV(id, pw))
             {
                 Nhanvien = BilliardClubBUS.NhanvienBUS.getNVbyId(id);

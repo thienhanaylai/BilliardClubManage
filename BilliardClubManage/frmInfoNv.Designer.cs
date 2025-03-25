@@ -107,7 +107,7 @@
             // 
             // dtpBirthdate
             // 
-            this.dtpBirthdate.CustomFormat = "dd/MM/yyyy";
+            this.dtpBirthdate.CustomFormat = "dd-MM-yyyy";
             this.dtpBirthdate.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBirthdate.Location = new System.Drawing.Point(516, 332);
