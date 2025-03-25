@@ -103,15 +103,18 @@
             this.btnClear.TabIndex = 32;
             this.btnClear.Text = "Nhập lại";
             this.btnClear.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // dtpBirthdate
             // 
+            this.dtpBirthdate.CustomFormat = "dd/MM/yyyy";
             this.dtpBirthdate.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBirthdate.Location = new System.Drawing.Point(516, 332);
             this.dtpBirthdate.Name = "dtpBirthdate";
             this.dtpBirthdate.Size = new System.Drawing.Size(203, 32);
-            this.dtpBirthdate.TabIndex = 31;
+            this.dtpBirthdate.TabIndex = 6;
+            this.dtpBirthdate.Value = new System.DateTime(2025, 3, 25, 0, 0, 0, 0);
             // 
             // btnExit
             // 
@@ -131,6 +134,7 @@
             this.btnExit.TabIndex = 10;
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // slChucvu
             // 
@@ -150,7 +154,7 @@
             this.slChucvu.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.slChucvu.Size = new System.Drawing.Size(218, 40);
             this.slChucvu.SymbolSize = 24;
-            this.slChucvu.TabIndex = 30;
+            this.slChucvu.TabIndex = 7;
             this.slChucvu.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.slChucvu.Watermark = "Chức vụ";
             // 
@@ -168,7 +172,7 @@
             this.txtRePw.Radius = 35;
             this.txtRePw.ShowText = false;
             this.txtRePw.Size = new System.Drawing.Size(703, 50);
-            this.txtRePw.TabIndex = 20;
+            this.txtRePw.TabIndex = 9;
             this.txtRePw.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtRePw.Watermark = "Nhập lại mật khẩu";
             this.txtRePw.WatermarkActiveColor = System.Drawing.Color.Silver;
@@ -188,7 +192,7 @@
             this.txtPw.Radius = 35;
             this.txtPw.ShowText = false;
             this.txtPw.Size = new System.Drawing.Size(703, 50);
-            this.txtPw.TabIndex = 19;
+            this.txtPw.TabIndex = 8;
             this.txtPw.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtPw.Watermark = "Mật khẩu";
             this.txtPw.WatermarkActiveColor = System.Drawing.Color.Silver;
@@ -204,7 +208,7 @@
             this.rdNu.MinimumSize = new System.Drawing.Size(1, 1);
             this.rdNu.Name = "rdNu";
             this.rdNu.Size = new System.Drawing.Size(150, 50);
-            this.rdNu.TabIndex = 28;
+            this.rdNu.TabIndex = 5;
             this.rdNu.Text = "Nữ";
             // 
             // rdNam
@@ -217,7 +221,7 @@
             this.rdNam.MinimumSize = new System.Drawing.Size(1, 1);
             this.rdNam.Name = "rdNam";
             this.rdNam.Size = new System.Drawing.Size(150, 50);
-            this.rdNam.TabIndex = 27;
+            this.rdNam.TabIndex = 4;
             this.rdNam.Text = "Nam";
             // 
             // txtTen
@@ -233,7 +237,7 @@
             this.txtTen.Radius = 35;
             this.txtTen.ShowText = false;
             this.txtTen.Size = new System.Drawing.Size(350, 50);
-            this.txtTen.TabIndex = 19;
+            this.txtTen.TabIndex = 3;
             this.txtTen.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtTen.Watermark = "Nhập tên";
             this.txtTen.WatermarkActiveColor = System.Drawing.Color.Silver;
@@ -265,7 +269,7 @@
             this.txtHo.Radius = 35;
             this.txtHo.ShowText = false;
             this.txtHo.Size = new System.Drawing.Size(345, 50);
-            this.txtHo.TabIndex = 18;
+            this.txtHo.TabIndex = 2;
             this.txtHo.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtHo.Watermark = "Nhập họ";
             this.txtHo.WatermarkActiveColor = System.Drawing.Color.Silver;
@@ -393,7 +397,7 @@
             this.txtID.Radius = 35;
             this.txtID.ShowText = false;
             this.txtID.Size = new System.Drawing.Size(700, 50);
-            this.txtID.TabIndex = 17;
+            this.txtID.TabIndex = 1;
             this.txtID.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtID.Watermark = "Nhập ID";
             this.txtID.WatermarkActiveColor = System.Drawing.Color.Silver;

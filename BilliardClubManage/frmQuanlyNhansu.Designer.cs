@@ -35,18 +35,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNhansu = new Sunny.UI.UIDataGridView();
-            this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmChucvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
+            this.txtTim = new Sunny.UI.UITextBox();
             this.btnTimnv = new Sunny.UI.UIButton();
             this.btnXoanv = new Sunny.UI.UIButton();
             this.btnSuanv = new Sunny.UI.UIButton();
             this.btnThemnv = new Sunny.UI.UIButton();
             this.billiardClubDataSet = new BilliardClubManage.BilliardClubDataSet();
             this.billiardClubDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmGioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmChucvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhansu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billiardClubDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billiardClubDataSetBindingSource)).BeginInit();
@@ -72,7 +72,7 @@
             this.clmID,
             this.clmName,
             this.Column2,
-            this.Column1,
+            this.clmGioitinh,
             this.clmChucvu});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -102,6 +102,7 @@
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dgvNhansu.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvNhansu.RowTemplate.Height = 40;
             this.dgvNhansu.SelectedIndex = -1;
             this.dgvNhansu.ShowCellErrors = false;
             this.dgvNhansu.ShowCellToolTips = false;
@@ -110,67 +111,25 @@
             this.dgvNhansu.Size = new System.Drawing.Size(1368, 684);
             this.dgvNhansu.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.dgvNhansu.TabIndex = 1;
-            this.dgvNhansu.RowTemplate.Height = 40;
+            this.dgvNhansu.DataSourceChanged += new System.EventHandler(this.dgvNhansu_DataSourceChanged);
+            this.dgvNhansu.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvNhansu_CellFormatting);
             // 
-            // clmID
+            // txtTim
             // 
-            this.clmID.DataPropertyName = "IDnv";
-            this.clmID.HeaderText = "ID";
-            this.clmID.Name = "clmID";
-            this.clmID.ReadOnly = true;
-            // 
-            // clmName
-            // 
-            this.clmName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clmName.DataPropertyName = "Hoten";
-            this.clmName.HeaderText = "Họ tên";
-            this.clmName.MinimumWidth = 550;
-            this.clmName.Name = "clmName";
-            this.clmName.ReadOnly = true;
-            this.clmName.Width = 550;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Ngaysinh";
-            this.Column2.HeaderText = "Ngày sinh";
-            this.Column2.MinimumWidth = 300;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 300;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Gioitinh";
-            this.Column1.HeaderText = "Giới tính";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // clmChucvu
-            // 
-            this.clmChucvu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clmChucvu.DataPropertyName = "Chucvu";
-            this.clmChucvu.HeaderText = "Chức vụ";
-            this.clmChucvu.MinimumWidth = 315;
-            this.clmChucvu.Name = "clmChucvu";
-            this.clmChucvu.ReadOnly = true;
-            this.clmChucvu.Width = 315;
-            // 
-            // uiTextBox1
-            // 
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTextBox1.Location = new System.Drawing.Point(687, 12);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox1.Radius = 40;
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(696, 60);
-            this.uiTextBox1.TabIndex = 15;
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.Watermark = "Nhập ID, tên nhân viên";
-            this.uiTextBox1.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtTim.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTim.Location = new System.Drawing.Point(687, 12);
+            this.txtTim.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTim.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtTim.Name = "txtTim";
+            this.txtTim.Padding = new System.Windows.Forms.Padding(5);
+            this.txtTim.Radius = 40;
+            this.txtTim.ShowText = false;
+            this.txtTim.Size = new System.Drawing.Size(696, 60);
+            this.txtTim.TabIndex = 15;
+            this.txtTim.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtTim.Watermark = "Nhập ID, tên nhân viên";
+            this.txtTim.WatermarkActiveColor = System.Drawing.Color.Silver;
             // 
             // btnTimnv
             // 
@@ -184,6 +143,7 @@
             this.btnTimnv.TabIndex = 14;
             this.btnTimnv.Text = "Tìm";
             this.btnTimnv.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnTimnv.Click += new System.EventHandler(this.btnTimnv_Click);
             // 
             // btnXoanv
             // 
@@ -197,6 +157,7 @@
             this.btnXoanv.TabIndex = 12;
             this.btnXoanv.Text = "Xóa";
             this.btnXoanv.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnXoanv.Click += new System.EventHandler(this.btnXoanv_Click);
             // 
             // btnSuanv
             // 
@@ -236,11 +197,54 @@
             this.billiardClubDataSetBindingSource.DataSource = this.billiardClubDataSet;
             this.billiardClubDataSetBindingSource.Position = 0;
             // 
+            // clmID
+            // 
+            this.clmID.DataPropertyName = "IDnv";
+            this.clmID.HeaderText = "ID";
+            this.clmID.Name = "clmID";
+            this.clmID.ReadOnly = true;
+            // 
+            // clmName
+            // 
+            this.clmName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clmName.DataPropertyName = "Hoten";
+            this.clmName.HeaderText = "Họ tên";
+            this.clmName.MinimumWidth = 550;
+            this.clmName.Name = "clmName";
+            this.clmName.ReadOnly = true;
+            this.clmName.Width = 550;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Ngaysinh";
+            this.Column2.HeaderText = "Ngày sinh";
+            this.Column2.MinimumWidth = 300;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 300;
+            // 
+            // clmGioitinh
+            // 
+            this.clmGioitinh.DataPropertyName = "Gioitinh";
+            this.clmGioitinh.HeaderText = "Giới tính";
+            this.clmGioitinh.Name = "clmGioitinh";
+            this.clmGioitinh.ReadOnly = true;
+            // 
+            // clmChucvu
+            // 
+            this.clmChucvu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clmChucvu.DataPropertyName = "Chucvu";
+            this.clmChucvu.HeaderText = "Chức vụ";
+            this.clmChucvu.MinimumWidth = 315;
+            this.clmChucvu.Name = "clmChucvu";
+            this.clmChucvu.ReadOnly = true;
+            this.clmChucvu.Width = 315;
+            // 
             // frmQuanlyNhansu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1392, 778);
-            this.Controls.Add(this.uiTextBox1);
+            this.Controls.Add(this.txtTim);
             this.Controls.Add(this.btnTimnv);
             this.Controls.Add(this.btnXoanv);
             this.Controls.Add(this.btnSuanv);
@@ -260,7 +264,7 @@
         #endregion
 
         private Sunny.UI.UIDataGridView dgvNhansu;
-        private Sunny.UI.UITextBox uiTextBox1;
+        private Sunny.UI.UITextBox txtTim;
         private Sunny.UI.UIButton btnTimnv;
         private Sunny.UI.UIButton btnXoanv;
         private Sunny.UI.UIButton btnSuanv;
@@ -270,7 +274,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmID;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmGioitinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmChucvu;
     }
 }

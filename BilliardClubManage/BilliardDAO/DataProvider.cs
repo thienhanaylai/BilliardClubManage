@@ -10,7 +10,7 @@ namespace BilliardClubManage.BilliardDAO
 {
     internal class DataProvider
     {
-        public static string connectionStr = @"Data Source=DESKTOP-4TS178P;Initial Catalog=BilliardClub;Integrated Security=True";
+        public static string connectionStr = @"Data Source=.;Initial Catalog=BilliardClub;Integrated Security=True";
         SqlConnection connect;
         private SqlCommand cmd;
 

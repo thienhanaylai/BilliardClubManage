@@ -32,7 +32,7 @@ namespace BilliardClubManage.BilliardDAO
                 string Ten = rd.GetString(2);
                 nv.Hoten = Ho + " " + Ten;
                 nv.Ngaysinh = rd.GetDateTime(3);
-                nv.Gioitinh= rd.GetBoolean(4);
+                nv.Gioitinh = rd.GetBoolean(4);
                 nv.Chucvu = rd.GetString(5);
                 nv.Matkhau = rd.GetString(6);
                 listNV.Add(nv);
@@ -93,7 +93,52 @@ namespace BilliardClubManage.BilliardDAO
                 dataProvider.Close();
                 return false;
             }
-            
+        }
+
+        public bool updateNV(string id, string ho, string ten, DateTime ngaysinh, bool gioitinh, string chucvu, string matkhau)
+        {
+            string sql = "exec updateNV '" + id + "','" + ho + "','" + ten + "','" + ngaysinh + "','" + gioitinh + "','" + chucvu + "','" + matkhau +"'";
+            dataProvider.Connect();
+            int flag = dataProvider.ExecuteNonQuery(sql);
+            if (flag > 0)
+            {
+                dataProvider.Close();
+                return true;
+            }
+            else
+            {
+                dataProvider.Close();
+                return false;
+            }
+        }
+
+        public bool checkID(string id)
+        {
+            string sql = "select * from Nhanvien where IDnv = N'" + id + "'";
+            dataProvider.Connect();
+            SqlDataReader rd = dataProvider.SqlDataReader(sql);
+            if (rd.Read()) //neu co cot du lieu tra ve thi tra ve true da ton tai id nay
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool dropNV(string id)
+        {
+            string sql = "exec dropNV '" + id + "'";
+            dataProvider.Connect();
+            int flag = dataProvider.ExecuteNonQuery(sql);
+            if (flag > 0)
+            {
+                dataProvider.Close();
+                return true;
+            }
+            else
+            {
+                dataProvider.Close();
+                return false;
+            }
         }
 
     }
