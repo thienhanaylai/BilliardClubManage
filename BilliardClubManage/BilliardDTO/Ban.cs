@@ -12,8 +12,8 @@ namespace BilliardClubManage.BilliardDTO
         private string tenban;
         private bool tinhtrang;
         private string khuvuc;
-        private DateTime gioBD;
-        private DateTime gioKT;
+        private DateTime? gioBD;
+        private DateTime? gioKT;
         private int dongia;
         private string loaiban;
 
@@ -35,8 +35,8 @@ namespace BilliardClubManage.BilliardDTO
         public string Tenban { get => tenban; set => tenban = value; }
         public bool Tinhtrang { get => tinhtrang; set => tinhtrang = value; }
         public string Khuvuc { get => khuvuc; set => khuvuc = value; }
-        public DateTime GioBD { get => gioBD; set => gioBD = value; }
-        public DateTime GioKT { get => gioKT; set => gioKT = value; }
+        public DateTime? GioBD { get => gioBD; set => gioBD = value; }
+        public DateTime? GioKT { get => gioKT; set => gioKT = value; }
         public int Dongia { get => dongia; set => dongia = value; }
         public string Loaiban { get => loaiban; set => loaiban = value; }
     }

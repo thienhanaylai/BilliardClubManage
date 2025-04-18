@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using BilliardClubManage.BilliardDTO;
 
 
@@ -80,7 +83,8 @@ namespace BilliardClubManage.BilliardDAO
 
         public bool insertNV(string id, string ho, string ten, DateTime ngaysinh, bool gioitinh, string chucvu, string matkhau)
         {
-            string sql = "insert into Nhanvien values(N'" + id + "',N'" + ho + "', N'" + ten +"',N'" + ngaysinh + "',N'" + gioitinh + "',N'" + chucvu + "',N'" + matkhau + "')";
+            string dateString = ngaysinh.ToString("yyyy-MM-dd");//convert format date giua c3 va sql
+            string sql = "insert into Nhanvien values(N'" + id + "',N'" + ho + "', N'" + ten +"',N'" + dateString + "',N'" + gioitinh + "',N'" + chucvu + "',N'" + matkhau + "')";
             dataProvider.Connect();
             int flag = dataProvider.ExecuteNonQuery(sql);
             if(flag > 0)
@@ -97,7 +101,8 @@ namespace BilliardClubManage.BilliardDAO
 
         public bool updateNV(string id, string ho, string ten, DateTime ngaysinh, bool gioitinh, string chucvu, string matkhau)
         {
-            string sql = "exec updateNV '" + id + "','" + ho + "','" + ten + "','" + ngaysinh + "','" + gioitinh + "','" + chucvu + "','" + matkhau +"'";
+            string dateString = ngaysinh.ToString("yyyy-MM-dd"); //convert format date giua c3 va sql
+            string sql = "exec updateNV '" + id + "','" + ho + "','" + ten + "','" + dateString + "','" + gioitinh + "','" + chucvu + "','" + matkhau +"'";
             dataProvider.Connect();
             int flag = dataProvider.ExecuteNonQuery(sql);
             if (flag > 0)

@@ -52,10 +52,6 @@ namespace BilliardClubManage
         {
             dgvNhansu.DataSource = BilliardClubBUS.NhanvienBUS.getListNV();
         }
-        private void dgvNhansu_DataSourceChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void btnXoanv_Click(object sender, EventArgs e)
         {

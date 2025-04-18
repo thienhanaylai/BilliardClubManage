@@ -111,7 +111,6 @@
             this.dgvNhansu.Size = new System.Drawing.Size(1368, 684);
             this.dgvNhansu.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.dgvNhansu.TabIndex = 1;
-            this.dgvNhansu.DataSourceChanged += new System.EventHandler(this.dgvNhansu_DataSourceChanged);
             this.dgvNhansu.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvNhansu_CellFormatting);
             // 
             // txtTim

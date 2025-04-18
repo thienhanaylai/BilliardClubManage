@@ -120,7 +120,7 @@
             // 
             // dgvBan
             // 
-            this.dgvBan.AllowDrop = true;
+            this.dgvBan.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.dgvBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBan.BackgroundColor = System.Drawing.Color.White;
@@ -175,9 +175,11 @@
             this.dgvBan.Size = new System.Drawing.Size(1368, 684);
             this.dgvBan.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.dgvBan.TabIndex = 10;
+            this.dgvBan.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvBan_CellFormatting);
             // 
             // clmID
             // 
+            this.clmID.DataPropertyName = "IDban";
             this.clmID.HeaderText = "ID";
             this.clmID.Name = "clmID";
             this.clmID.ReadOnly = true;
@@ -185,6 +187,7 @@
             // clmName
             // 
             this.clmName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clmName.DataPropertyName = "Tenban";
             this.clmName.HeaderText = "Tên bàn";
             this.clmName.MinimumWidth = 400;
             this.clmName.Name = "clmName";
@@ -193,6 +196,7 @@
             // 
             // tinhtrang
             // 
+            this.tinhtrang.DataPropertyName = "Tinhtrang";
             this.tinhtrang.HeaderText = "Tình trạng";
             this.tinhtrang.MinimumWidth = 300;
             this.tinhtrang.Name = "tinhtrang";
@@ -201,6 +205,7 @@
             // 
             // clmUnit
             // 
+            this.clmUnit.DataPropertyName = "Dongia";
             this.clmUnit.HeaderText = "Đơn giá ";
             this.clmUnit.MinimumWidth = 230;
             this.clmUnit.Name = "clmUnit";
@@ -209,6 +214,7 @@
             // 
             // clmQty
             // 
+            this.clmQty.DataPropertyName = "Khuvuc";
             this.clmQty.HeaderText = "Khu vực";
             this.clmQty.MinimumWidth = 335;
             this.clmQty.Name = "clmQty";

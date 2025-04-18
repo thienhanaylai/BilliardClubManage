@@ -30,7 +30,6 @@
         {
             this.uiPanel1 = new Sunny.UI.UIPanel();
             this.btnClear = new Sunny.UI.UIButton();
-            this.dtpBirthdate = new System.Windows.Forms.DateTimePicker();
             this.btnExit = new Sunny.UI.UISymbolButton();
             this.slChucvu = new Sunny.UI.UIComboBox();
             this.txtRePw = new Sunny.UI.UITextBox();
@@ -50,14 +49,15 @@
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.txtID = new Sunny.UI.UITextBox();
             this.btnXacnhan = new Sunny.UI.UIButton();
+            this.dtpBirthdate = new System.Windows.Forms.DateTimePicker();
             this.uiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiPanel1
             // 
             this.uiPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.uiPanel1.Controls.Add(this.btnClear);
             this.uiPanel1.Controls.Add(this.dtpBirthdate);
+            this.uiPanel1.Controls.Add(this.btnClear);
             this.uiPanel1.Controls.Add(this.btnExit);
             this.uiPanel1.Controls.Add(this.slChucvu);
             this.uiPanel1.Controls.Add(this.txtRePw);
@@ -104,17 +104,6 @@
             this.btnClear.Text = "Nhập lại";
             this.btnClear.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // dtpBirthdate
-            // 
-            this.dtpBirthdate.CustomFormat = "dd-MM-yyyy";
-            this.dtpBirthdate.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBirthdate.Location = new System.Drawing.Point(516, 332);
-            this.dtpBirthdate.Name = "dtpBirthdate";
-            this.dtpBirthdate.Size = new System.Drawing.Size(203, 32);
-            this.dtpBirthdate.TabIndex = 6;
-            this.dtpBirthdate.Value = new System.DateTime(2025, 3, 25, 0, 0, 0, 0);
             // 
             // btnExit
             // 
@@ -418,6 +407,15 @@
             this.btnXacnhan.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
+            // dtpBirthdate
+            // 
+            this.dtpBirthdate.CustomFormat = "dd-MM-yyyy";
+            this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpBirthdate.Location = new System.Drawing.Point(519, 335);
+            this.dtpBirthdate.Name = "dtpBirthdate";
+            this.dtpBirthdate.Size = new System.Drawing.Size(200, 26);
+            this.dtpBirthdate.TabIndex = 34;
+            // 
             // frmInfoNv
             // 
             this.AcceptButton = this.btnXacnhan;
@@ -461,7 +459,7 @@
         private Sunny.UI.UITextBox txtPw;
         private Sunny.UI.UIComboBox slChucvu;
         private Sunny.UI.UISymbolButton btnExit;
-        private System.Windows.Forms.DateTimePicker dtpBirthdate;
         private Sunny.UI.UIButton btnClear;
+        private System.Windows.Forms.DateTimePicker dtpBirthdate;
     }
 }

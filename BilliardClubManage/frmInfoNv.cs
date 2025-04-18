@@ -81,6 +81,7 @@ namespace BilliardClubManage
             id = txtID.Text;
             ho = txtHo.Text;
             ten = txtTen.Text;
+            string temp = dtpBirthdate.Value.ToString();
             ngaysinh = dtpBirthdate.Value;
             if (rdNam.Checked)
             {
