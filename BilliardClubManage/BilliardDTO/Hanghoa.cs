@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilliardClubManage.BilliardDTO
 {
-    internal class Hanghoa
+    public class Hanghoa
     {
         private string idhanghoa;
         private string tenhanghoa;

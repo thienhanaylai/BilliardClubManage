@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilliardClubManage.BilliardDTO
 {
-    internal class Ban
+    public class Ban
     {
         private string idban;
         private string tenban;
@@ -20,6 +20,18 @@ namespace BilliardClubManage.BilliardDTO
         public Ban() { }
 
         public Ban(string idban, string tenban, bool tinhtrang, string khuvuc, DateTime gioBD, DateTime gioKT, int dongia, string loaiban)
+        {
+            this.idban = idban;
+            this.tenban = tenban;
+            this.tinhtrang = tinhtrang;
+            this.khuvuc = khuvuc;
+            this.gioBD = gioBD;
+            this.gioKT = gioKT;
+            this.dongia = dongia;
+            this.loaiban = loaiban;
+        }
+
+        public Ban(string idban, string tenban, bool tinhtrang, string khuvuc, DateTime? gioBD, DateTime? gioKT, int dongia, string loaiban)
         {
             this.idban = idban;
             this.tenban = tenban;

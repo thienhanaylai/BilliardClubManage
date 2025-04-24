@@ -1,4 +1,6 @@
-﻿namespace BilliardClubManage
+﻿using System.Windows.Forms;
+
+namespace BilliardClubManage
 {
     partial class frmQuanlyban
     {
@@ -44,6 +46,7 @@
             this.tinhtrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmLoaiban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,6 +92,7 @@
             this.btnXoaban.TabIndex = 13;
             this.btnXoaban.Text = "Xóa";
             this.btnXoaban.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnXoaban.Click += new System.EventHandler(this.btnXoaban_Click);
             // 
             // btnSuaban
             // 
@@ -139,7 +143,8 @@
             this.clmName,
             this.tinhtrang,
             this.clmUnit,
-            this.clmQty});
+            this.clmQty,
+            this.clmLoaiban});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -167,6 +172,7 @@
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dgvBan.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvBan.RowTemplate.Height = 35;
             this.dgvBan.SelectedIndex = -1;
             this.dgvBan.ShowCellErrors = false;
             this.dgvBan.ShowCellToolTips = false;
@@ -189,10 +195,10 @@
             this.clmName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.clmName.DataPropertyName = "Tenban";
             this.clmName.HeaderText = "Tên bàn";
-            this.clmName.MinimumWidth = 400;
+            this.clmName.MinimumWidth = 300;
             this.clmName.Name = "clmName";
             this.clmName.ReadOnly = true;
-            this.clmName.Width = 400;
+            this.clmName.Width = 300;
             // 
             // tinhtrang
             // 
@@ -220,6 +226,14 @@
             this.clmQty.Name = "clmQty";
             this.clmQty.ReadOnly = true;
             this.clmQty.Width = 335;
+            // 
+            // clmLoaiban
+            // 
+            this.clmLoaiban.DataPropertyName = "Loaiban";
+            this.clmLoaiban.HeaderText = "Loai Ban";
+            this.clmLoaiban.MinimumWidth = 100;
+            this.clmLoaiban.Name = "clmLoaiban";
+            this.clmLoaiban.ReadOnly = true;
             // 
             // frmQuanlyban
             // 
@@ -253,5 +267,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tinhtrang;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmQty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmLoaiban;
     }
 }

@@ -134,7 +134,7 @@ namespace BilliardClubManage
                     {
                         MessageBox.Show("Sua thong tin nhân viên thành công");
                         onDataUpdated?.Invoke(); // sua thanh cong thi goi ham tu form cha de refesh form cha
-                        this.Close();
+                        this.Close();   
                     }
                     else { MessageBox.Show("Thêm nhân viên thất bại"); }
                 }

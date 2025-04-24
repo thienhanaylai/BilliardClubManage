@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilliardClubManage.BilliardDTO
 {
-    internal class Hoadon
+    public class Hoadon
     {
         private string idhoadon;
         private DateTime ngaylap;

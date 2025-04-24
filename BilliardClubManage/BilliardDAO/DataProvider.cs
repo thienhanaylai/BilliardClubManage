@@ -5,6 +5,7 @@ using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace BilliardClubManage.BilliardDAO
 {
@@ -41,8 +42,21 @@ namespace BilliardClubManage.BilliardDAO
         public int ExecuteNonQuery(string sql)
         {
             //thực thi câu lệnh sql không trả về giá trị
-            cmd = new SqlCommand(sql, connect);
-            return cmd.ExecuteNonQuery();
+            try
+            {
+                cmd = new SqlCommand(sql, connect);
+                return cmd.ExecuteNonQuery();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Co chua ho so hoa don khong the xoa !");
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi không xác định: " + ex.Message);
+                return -1;
+            }
         }
     }
 }

@@ -16,6 +16,29 @@ namespace BilliardClubBUS
                 return new BanDAO().getListBan();
         }
 
+        public static Ban getBanbyID(string id)
+        {
+            return new BanDAO().getBanbyID(id);
+        }
 
+        public static bool validateID(string id)
+        {
+            return new BanDAO().vaidateID(id);
+        }
+
+        public static bool insertBan(Ban ban)
+        {
+            return new BanDAO().insertBan(ban);
+        }
+
+        public static bool updateBan(Ban ban)
+        {
+            return new BanDAO().updateBan(ban);
+        }
+
+        public static bool deleteBan(string id)
+        {
+            return new BanDAO().deleteBan(id);
+        }
     }
 }
