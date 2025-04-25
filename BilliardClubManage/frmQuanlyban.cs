@@ -88,9 +88,24 @@ namespace BilliardClubManage
                 }
                 else
                 {
-                    MessageBox.Show("Xóa thất bại");
+                    MessageBox.Show("Xóa thất bại ! Co hoa don lien quan den ban khong the xoa !");
                 }
             }
+        }
+
+        private void btnTimban_Click(object sender, EventArgs e)
+        {
+            string idOrName = txtTimban.Text;
+            List<Ban> list = BilliardClubBUS.BanBUS.getListBan();
+            List<Ban> result = new List<Ban>();
+            foreach (Ban ban in list)
+            {
+                if (ban.IDban.Contains(idOrName) || ban.Tenban.Contains(idOrName))
+                {
+                    result.Add(ban);
+                }
+            }
+            dgvBan.DataSource = result;
         }
     }
 }

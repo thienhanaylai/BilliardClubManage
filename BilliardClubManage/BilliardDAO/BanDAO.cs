@@ -130,5 +130,34 @@ namespace BilliardClubManage.BilliardDAO
                 return false;
             }
         }
+
+        public List<Ban> getListBanByKhuVuc(string khuvuc)
+        {
+            List<Ban> listBan = new List<Ban>();
+            string sql = "select * from ban where Khuvuc = N'" + khuvuc + "'";
+            dataProvider.Connect();
+            SqlDataReader rd = dataProvider.SqlDataReader(sql);
+            while (rd.Read())
+            {
+                Ban ban = new Ban();
+                ban.IDban = rd.GetString(0);
+                ban.Tenban = rd.GetString(1);
+                ban.Tinhtrang = rd.GetBoolean(2);
+                ban.Khuvuc = rd.GetString(3);
+                if (rd.IsDBNull(4))
+                    ban.GioBD = null;
+                else ban.GioBD = rd.GetDateTime(4);
+                if (rd.IsDBNull(5))
+                    ban.GioKT = null;
+                else ban.GioKT = rd.GetDateTime(5);
+                ban.Dongia = rd.GetInt32(6);
+                if (rd.IsDBNull(7))
+                    ban.Loaiban = "null";
+                else ban.Loaiban = rd.GetString(7);
+                listBan.Add(ban);
+            }
+            dataProvider.Close();
+            return listBan;
+        }
     }
 }

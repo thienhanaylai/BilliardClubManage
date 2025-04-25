@@ -28,20 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
             this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnThemHanghoa = new Sunny.UI.UIButton();
+            this.btnNhap = new Sunny.UI.UIButton();
             this.btnSuaHanghoa = new Sunny.UI.UIButton();
-            this.btnXoaHanghoa = new Sunny.UI.UIButton();
             this.btnXuatHanghoa = new Sunny.UI.UIButton();
             this.btnTimHanghoa = new Sunny.UI.UIButton();
             this.txtTimhanghoa = new Sunny.UI.UITextBox();
@@ -51,18 +50,18 @@
             // uiDataGridView1
             // 
             this.uiDataGridView1.AllowDrop = true;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.uiDataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.uiDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.uiDataGridView1.ColumnHeadersHeight = 32;
             this.uiDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmID,
@@ -70,33 +69,33 @@
             this.clmUnit,
             this.clmQty,
             this.clmPrice});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.uiDataGridView1.EnableHeadersVisualStyles = false;
             this.uiDataGridView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.uiDataGridView1.Location = new System.Drawing.Point(12, 82);
             this.uiDataGridView1.Name = "uiDataGridView1";
             this.uiDataGridView1.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.uiDataGridView1.RowHeadersVisible = false;
             this.uiDataGridView1.RowHeadersWidth = 50;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.uiDataGridView1.SelectedIndex = -1;
             this.uiDataGridView1.ShowCellErrors = false;
             this.uiDataGridView1.ShowCellToolTips = false;
@@ -145,19 +144,19 @@
             this.clmPrice.ReadOnly = true;
             this.clmPrice.Width = 305;
             // 
-            // btnThemHanghoa
+            // btnNhap
             // 
-            this.btnThemHanghoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThemHanghoa.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemHanghoa.Location = new System.Drawing.Point(12, 12);
-            this.btnThemHanghoa.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnThemHanghoa.Name = "btnThemHanghoa";
-            this.btnThemHanghoa.Radius = 35;
-            this.btnThemHanghoa.Size = new System.Drawing.Size(130, 60);
-            this.btnThemHanghoa.TabIndex = 4;
-            this.btnThemHanghoa.Text = "Thêm";
-            this.btnThemHanghoa.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnThemHanghoa.Click += new System.EventHandler(this.btnThemHanghoa_Click);
+            this.btnNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNhap.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhap.Location = new System.Drawing.Point(12, 12);
+            this.btnNhap.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnNhap.Name = "btnNhap";
+            this.btnNhap.Radius = 35;
+            this.btnNhap.Size = new System.Drawing.Size(130, 60);
+            this.btnNhap.TabIndex = 4;
+            this.btnNhap.Text = "Nhập";
+            this.btnNhap.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnNhap.Click += new System.EventHandler(this.btnThemHanghoa_Click);
             // 
             // btnSuaHanghoa
             // 
@@ -173,24 +172,11 @@
             this.btnSuaHanghoa.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnSuaHanghoa.Click += new System.EventHandler(this.btnSuaHanghoa_Click);
             // 
-            // btnXoaHanghoa
-            // 
-            this.btnXoaHanghoa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXoaHanghoa.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaHanghoa.Location = new System.Drawing.Point(284, 12);
-            this.btnXoaHanghoa.MinimumSize = new System.Drawing.Size(1, 1);
-            this.btnXoaHanghoa.Name = "btnXoaHanghoa";
-            this.btnXoaHanghoa.Radius = 35;
-            this.btnXoaHanghoa.Size = new System.Drawing.Size(130, 60);
-            this.btnXoaHanghoa.TabIndex = 6;
-            this.btnXoaHanghoa.Text = "Xóa";
-            this.btnXoaHanghoa.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            // 
             // btnXuatHanghoa
             // 
             this.btnXuatHanghoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXuatHanghoa.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXuatHanghoa.Location = new System.Drawing.Point(420, 12);
+            this.btnXuatHanghoa.Location = new System.Drawing.Point(284, 12);
             this.btnXuatHanghoa.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnXuatHanghoa.Name = "btnXuatHanghoa";
             this.btnXuatHanghoa.Radius = 35;
@@ -230,19 +216,18 @@
             this.txtTimhanghoa.Watermark = "Nhập mã hàng, tên hàng";
             this.txtTimhanghoa.WatermarkActiveColor = System.Drawing.Color.Silver;
             // 
-            // frmKho
+            // frmQuanlyKho
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1392, 778);
             this.Controls.Add(this.txtTimhanghoa);
             this.Controls.Add(this.btnTimHanghoa);
             this.Controls.Add(this.btnXuatHanghoa);
-            this.Controls.Add(this.btnXoaHanghoa);
             this.Controls.Add(this.btnSuaHanghoa);
-            this.Controls.Add(this.btnThemHanghoa);
+            this.Controls.Add(this.btnNhap);
             this.Controls.Add(this.uiDataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmKho";
+            this.Name = "frmQuanlyKho";
             this.Text = "frmKho";
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -252,9 +237,8 @@
         #endregion
 
         private Sunny.UI.UIDataGridView uiDataGridView1;
-        private Sunny.UI.UIButton btnThemHanghoa;
+        private Sunny.UI.UIButton btnNhap;
         private Sunny.UI.UIButton btnSuaHanghoa;
-        private Sunny.UI.UIButton btnXoaHanghoa;
         private Sunny.UI.UIButton btnXuatHanghoa;
         private Sunny.UI.UIButton btnTimHanghoa;
         private Sunny.UI.UITextBox txtTimhanghoa;

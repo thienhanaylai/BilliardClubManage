@@ -95,6 +95,7 @@
     <Compile Include="BilliardDTO\Ban.cs" />
     <Compile Include="BilliardDTO\Hanghoa.cs" />
     <Compile Include="BilliardDTO\Hoadon.cs" />
+    <Compile Include="BilliardDTO\IHanghoa.cs" />
     <Compile Include="BilliardDTO\Khachhang.cs" />
     <Compile Include="BilliardDTO\Nhanvien.cs" />
     <Compile Include="frmInfoHanghoa.cs">
@@ -227,14 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="BilliardClubDataSet.xsc">
       <DependentUpon>BilliardClubDataSet.xsd</DependentUpon>
     </None>
@@ -251,6 +247,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -288,11 +289,19 @@
     <None Include="Resources\admin.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\billiard 1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\order-food.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\ban1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ban0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billiard 1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billiard 1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

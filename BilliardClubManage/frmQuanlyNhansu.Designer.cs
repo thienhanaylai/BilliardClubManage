@@ -35,6 +35,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNhansu = new Sunny.UI.UIDataGridView();
+            this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmGioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmChucvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTim = new Sunny.UI.UITextBox();
             this.btnTimnv = new Sunny.UI.UIButton();
             this.btnXoanv = new Sunny.UI.UIButton();
@@ -42,11 +47,6 @@
             this.btnThemnv = new Sunny.UI.UIButton();
             this.billiardClubDataSet = new BilliardClubManage.BilliardClubDataSet();
             this.billiardClubDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmGioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmChucvu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhansu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billiardClubDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billiardClubDataSetBindingSource)).BeginInit();
@@ -112,6 +112,49 @@
             this.dgvNhansu.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.dgvNhansu.TabIndex = 1;
             this.dgvNhansu.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvNhansu_CellFormatting);
+            // 
+            // clmID
+            // 
+            this.clmID.DataPropertyName = "IDnv";
+            this.clmID.HeaderText = "ID";
+            this.clmID.Name = "clmID";
+            this.clmID.ReadOnly = true;
+            // 
+            // clmName
+            // 
+            this.clmName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clmName.DataPropertyName = "Hoten";
+            this.clmName.HeaderText = "Họ tên";
+            this.clmName.MinimumWidth = 550;
+            this.clmName.Name = "clmName";
+            this.clmName.ReadOnly = true;
+            this.clmName.Width = 550;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Ngaysinh";
+            this.Column2.HeaderText = "Ngày sinh";
+            this.Column2.MinimumWidth = 300;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 300;
+            // 
+            // clmGioitinh
+            // 
+            this.clmGioitinh.DataPropertyName = "Gioitinh";
+            this.clmGioitinh.HeaderText = "Giới tính";
+            this.clmGioitinh.Name = "clmGioitinh";
+            this.clmGioitinh.ReadOnly = true;
+            // 
+            // clmChucvu
+            // 
+            this.clmChucvu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clmChucvu.DataPropertyName = "Chucvu";
+            this.clmChucvu.HeaderText = "Chức vụ";
+            this.clmChucvu.MinimumWidth = 315;
+            this.clmChucvu.Name = "clmChucvu";
+            this.clmChucvu.ReadOnly = true;
+            this.clmChucvu.Width = 315;
             // 
             // txtTim
             // 
@@ -196,51 +239,9 @@
             this.billiardClubDataSetBindingSource.DataSource = this.billiardClubDataSet;
             this.billiardClubDataSetBindingSource.Position = 0;
             // 
-            // clmID
-            // 
-            this.clmID.DataPropertyName = "IDnv";
-            this.clmID.HeaderText = "ID";
-            this.clmID.Name = "clmID";
-            this.clmID.ReadOnly = true;
-            // 
-            // clmName
-            // 
-            this.clmName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clmName.DataPropertyName = "Hoten";
-            this.clmName.HeaderText = "Họ tên";
-            this.clmName.MinimumWidth = 550;
-            this.clmName.Name = "clmName";
-            this.clmName.ReadOnly = true;
-            this.clmName.Width = 550;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Ngaysinh";
-            this.Column2.HeaderText = "Ngày sinh";
-            this.Column2.MinimumWidth = 300;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 300;
-            // 
-            // clmGioitinh
-            // 
-            this.clmGioitinh.DataPropertyName = "Gioitinh";
-            this.clmGioitinh.HeaderText = "Giới tính";
-            this.clmGioitinh.Name = "clmGioitinh";
-            this.clmGioitinh.ReadOnly = true;
-            // 
-            // clmChucvu
-            // 
-            this.clmChucvu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.clmChucvu.DataPropertyName = "Chucvu";
-            this.clmChucvu.HeaderText = "Chức vụ";
-            this.clmChucvu.MinimumWidth = 315;
-            this.clmChucvu.Name = "clmChucvu";
-            this.clmChucvu.ReadOnly = true;
-            this.clmChucvu.Width = 315;
-            // 
             // frmQuanlyNhansu
             // 
+            this.AcceptButton = this.btnTimnv;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1392, 778);
             this.Controls.Add(this.txtTim);

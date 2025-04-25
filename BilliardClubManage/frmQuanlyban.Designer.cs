@@ -30,12 +30,12 @@ namespace BilliardClubManage
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.txtTimban = new Sunny.UI.UITextBox();
             this.btnTimban = new Sunny.UI.UIButton();
             this.btnXoaban = new Sunny.UI.UIButton();
             this.btnSuaban = new Sunny.UI.UIButton();
@@ -50,22 +50,22 @@ namespace BilliardClubManage
             ((System.ComponentModel.ISupportInitialize)(this.dgvBan)).BeginInit();
             this.SuspendLayout();
             // 
-            // uiTextBox1
+            // txtTimban
             // 
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTextBox1.Location = new System.Drawing.Point(693, 12);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox1.Radius = 40;
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(686, 60);
-            this.uiTextBox1.TabIndex = 16;
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.Watermark = "Nhập ID bàn, tên bàn";
-            this.uiTextBox1.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtTimban.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimban.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTimban.Location = new System.Drawing.Point(693, 12);
+            this.txtTimban.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTimban.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtTimban.Name = "txtTimban";
+            this.txtTimban.Padding = new System.Windows.Forms.Padding(5);
+            this.txtTimban.Radius = 40;
+            this.txtTimban.ShowText = false;
+            this.txtTimban.Size = new System.Drawing.Size(686, 60);
+            this.txtTimban.TabIndex = 16;
+            this.txtTimban.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtTimban.Watermark = "Nhập ID bàn, tên bàn";
+            this.txtTimban.WatermarkActiveColor = System.Drawing.Color.Silver;
             // 
             // btnTimban
             // 
@@ -79,6 +79,7 @@ namespace BilliardClubManage
             this.btnTimban.TabIndex = 15;
             this.btnTimban.Text = "Tìm";
             this.btnTimban.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnTimban.Click += new System.EventHandler(this.btnTimban_Click);
             // 
             // btnXoaban
             // 
@@ -125,18 +126,18 @@ namespace BilliardClubManage
             // dgvBan
             // 
             this.dgvBan.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.dgvBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.dgvBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvBan.BackgroundColor = System.Drawing.Color.White;
             this.dgvBan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvBan.ColumnHeadersHeight = 32;
             this.dgvBan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmID,
@@ -145,33 +146,33 @@ namespace BilliardClubManage
             this.clmUnit,
             this.clmQty,
             this.clmLoaiban});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBan.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBan.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvBan.EnableHeadersVisualStyles = false;
             this.dgvBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dgvBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             this.dgvBan.Location = new System.Drawing.Point(12, 82);
             this.dgvBan.Name = "dgvBan";
             this.dgvBan.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBan.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBan.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvBan.RowHeadersVisible = false;
             this.dgvBan.RowHeadersWidth = 50;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dgvBan.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dgvBan.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvBan.RowTemplate.Height = 35;
             this.dgvBan.SelectedIndex = -1;
             this.dgvBan.ShowCellErrors = false;
@@ -237,9 +238,10 @@ namespace BilliardClubManage
             // 
             // frmQuanlyban
             // 
+            this.AcceptButton = this.btnTimban;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1392, 778);
-            this.Controls.Add(this.uiTextBox1);
+            this.Controls.Add(this.txtTimban);
             this.Controls.Add(this.btnTimban);
             this.Controls.Add(this.btnXoaban);
             this.Controls.Add(this.btnSuaban);
@@ -256,7 +258,7 @@ namespace BilliardClubManage
 
         #endregion
 
-        private Sunny.UI.UITextBox uiTextBox1;
+        private Sunny.UI.UITextBox txtTimban;
         private Sunny.UI.UIButton btnTimban;
         private Sunny.UI.UIButton btnXoaban;
         private Sunny.UI.UIButton btnSuaban;

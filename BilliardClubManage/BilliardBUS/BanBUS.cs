@@ -40,5 +40,10 @@ namespace BilliardClubBUS
         {
             return new BanDAO().deleteBan(id);
         }
+
+        public static List<Ban> getListBanByKhuVuc(string khuvuc)
+        {
+            return new BanDAO().getListBanByKhuVuc(khuvuc);
+        }
     }
 }

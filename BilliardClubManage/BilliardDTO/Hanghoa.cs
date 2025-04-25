@@ -10,12 +10,12 @@ namespace BilliardClubManage.BilliardDTO
     {
         private string idhanghoa;
         private string tenhanghoa;
-        private int donvi;
+        private string donvi;
         private int gia;
 
         public Hanghoa() { }
 
-        public Hanghoa(string idhanghoa, string tenhanghoa, int donvi, int gia)
+        public Hanghoa(string idhanghoa, string tenhanghoa, string donvi, int gia)
         {
             this.idhanghoa = idhanghoa;
             this.tenhanghoa = tenhanghoa;
@@ -25,7 +25,7 @@ namespace BilliardClubManage.BilliardDTO
 
         public string IDhanghoa { get => idhanghoa; set => idhanghoa = value; }
         public string Tenhanghoa { get => tenhanghoa; set => tenhanghoa = value; }
-        public int Donvi { get => donvi; set => donvi = value; }
+        public string Donvi { get => donvi; set => donvi = value; }
         public int Gia { get => gia; set => gia = value; }
     }
 }

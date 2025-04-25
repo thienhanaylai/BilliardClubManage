@@ -48,15 +48,10 @@ namespace BilliardClubManage.BilliardDAO
                 return cmd.ExecuteNonQuery();
             }
             catch (SqlException ex)
-            {
-                MessageBox.Show("Co chua ho so hoa don khong the xoa !");
+            { 
                 return -1;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Lỗi không xác định: " + ex.Message);
-                return -1;
-            }
+
         }
     }
 }
