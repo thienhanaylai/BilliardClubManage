@@ -17,6 +17,7 @@ namespace BilliardClubManage.BilliardDAO
             dataProvider = new DataProvider();
         }
 
+
         public List<Ban> getListBan()
         {
             dataProvider.Connect();
@@ -159,5 +160,7 @@ namespace BilliardClubManage.BilliardDAO
             dataProvider.Close();
             return listBan;
         }
+
+
     }
 }

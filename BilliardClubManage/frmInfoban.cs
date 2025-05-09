@@ -137,5 +137,10 @@ namespace BilliardClubManage
             }
 
         }
+
+        private void uiSymbolButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

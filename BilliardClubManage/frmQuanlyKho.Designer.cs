@@ -33,27 +33,27 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
+            this.dgvKho = new Sunny.UI.UIDataGridView();
             this.clmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNhap = new Sunny.UI.UIButton();
             this.btnSuaHanghoa = new Sunny.UI.UIButton();
             this.btnXuatHanghoa = new Sunny.UI.UIButton();
             this.btnTimHanghoa = new Sunny.UI.UIButton();
             this.txtTimhanghoa = new Sunny.UI.UITextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKho)).BeginInit();
             this.SuspendLayout();
             // 
-            // uiDataGridView1
+            // dgvKho
             // 
-            this.uiDataGridView1.AllowDrop = true;
+            this.dgvKho.AllowDrop = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.uiDataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.uiDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvKho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvKho.BackgroundColor = System.Drawing.Color.White;
+            this.dgvKho.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -61,14 +61,14 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.uiDataGridView1.ColumnHeadersHeight = 32;
-            this.uiDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvKho.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvKho.ColumnHeadersHeight = 32;
+            this.dgvKho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmID,
             this.clmName,
             this.clmUnit,
-            this.clmQty,
-            this.clmPrice});
+            this.clmPrice,
+            this.clmQty});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -76,13 +76,13 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.uiDataGridView1.EnableHeadersVisualStyles = false;
-            this.uiDataGridView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.Location = new System.Drawing.Point(12, 82);
-            this.uiDataGridView1.Name = "uiDataGridView1";
-            this.uiDataGridView1.ReadOnly = true;
+            this.dgvKho.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvKho.EnableHeadersVisualStyles = false;
+            this.dgvKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dgvKho.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.dgvKho.Location = new System.Drawing.Point(12, 82);
+            this.dgvKho.Name = "dgvKho";
+            this.dgvKho.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -90,23 +90,24 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.uiDataGridView1.RowHeadersVisible = false;
-            this.uiDataGridView1.RowHeadersWidth = 50;
+            this.dgvKho.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvKho.RowHeadersVisible = false;
+            this.dgvKho.RowHeadersWidth = 50;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.uiDataGridView1.SelectedIndex = -1;
-            this.uiDataGridView1.ShowCellErrors = false;
-            this.uiDataGridView1.ShowCellToolTips = false;
-            this.uiDataGridView1.ShowEditingIcon = false;
-            this.uiDataGridView1.ShowRowErrors = false;
-            this.uiDataGridView1.Size = new System.Drawing.Size(1368, 684);
-            this.uiDataGridView1.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.TabIndex = 0;
+            this.dgvKho.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvKho.SelectedIndex = -1;
+            this.dgvKho.ShowCellErrors = false;
+            this.dgvKho.ShowCellToolTips = false;
+            this.dgvKho.ShowEditingIcon = false;
+            this.dgvKho.ShowRowErrors = false;
+            this.dgvKho.Size = new System.Drawing.Size(1368, 684);
+            this.dgvKho.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.dgvKho.TabIndex = 0;
             // 
             // clmID
             // 
+            this.clmID.DataPropertyName = "IDhanghoa";
             this.clmID.HeaderText = "ID";
             this.clmID.Name = "clmID";
             this.clmID.ReadOnly = true;
@@ -114,6 +115,7 @@
             // clmName
             // 
             this.clmName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.clmName.DataPropertyName = "Tenhanghoa";
             this.clmName.HeaderText = "NAME";
             this.clmName.MinimumWidth = 700;
             this.clmName.Name = "clmName";
@@ -122,27 +124,30 @@
             // 
             // clmUnit
             // 
+            this.clmUnit.DataPropertyName = "Donvi";
             this.clmUnit.HeaderText = "UNIT";
             this.clmUnit.MinimumWidth = 130;
             this.clmUnit.Name = "clmUnit";
             this.clmUnit.ReadOnly = true;
             this.clmUnit.Width = 130;
             // 
-            // clmQty
-            // 
-            this.clmQty.HeaderText = "Qty";
-            this.clmQty.MinimumWidth = 130;
-            this.clmQty.Name = "clmQty";
-            this.clmQty.ReadOnly = true;
-            this.clmQty.Width = 130;
-            // 
             // clmPrice
             // 
+            this.clmPrice.DataPropertyName = "Gia";
             this.clmPrice.HeaderText = "Price ( VND )";
             this.clmPrice.MinimumWidth = 305;
             this.clmPrice.Name = "clmPrice";
             this.clmPrice.ReadOnly = true;
             this.clmPrice.Width = 305;
+            // 
+            // clmQty
+            // 
+            this.clmQty.DataPropertyName = "Soluong";
+            this.clmQty.HeaderText = "Qty";
+            this.clmQty.MinimumWidth = 130;
+            this.clmQty.Name = "clmQty";
+            this.clmQty.ReadOnly = true;
+            this.clmQty.Width = 130;
             // 
             // btnNhap
             // 
@@ -198,6 +203,7 @@
             this.btnTimHanghoa.TabIndex = 8;
             this.btnTimHanghoa.Text = "Tìm";
             this.btnTimHanghoa.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnTimHanghoa.Click += new System.EventHandler(this.btnTimHanghoa_Click);
             // 
             // txtTimhanghoa
             // 
@@ -225,18 +231,19 @@
             this.Controls.Add(this.btnXuatHanghoa);
             this.Controls.Add(this.btnSuaHanghoa);
             this.Controls.Add(this.btnNhap);
-            this.Controls.Add(this.uiDataGridView1);
+            this.Controls.Add(this.dgvKho);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmQuanlyKho";
             this.Text = "frmKho";
-            ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmQuanlyKho_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKho)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Sunny.UI.UIDataGridView uiDataGridView1;
+        private Sunny.UI.UIDataGridView dgvKho;
         private Sunny.UI.UIButton btnNhap;
         private Sunny.UI.UIButton btnSuaHanghoa;
         private Sunny.UI.UIButton btnXuatHanghoa;
@@ -245,7 +252,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmID;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmUnit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmQty;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmQty;
     }
 }

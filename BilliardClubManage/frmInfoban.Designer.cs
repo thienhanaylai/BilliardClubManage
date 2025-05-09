@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.uiPanel1 = new Sunny.UI.UIPanel();
+            this.cbxLoaiban = new Sunny.UI.UIComboBox();
+            this.uiLabel5 = new Sunny.UI.UILabel();
             this.txtPrice = new Sunny.UI.UITextBox();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
@@ -41,8 +43,6 @@
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.txtId = new Sunny.UI.UITextBox();
             this.btnXacnhan = new Sunny.UI.UIButton();
-            this.uiLabel5 = new Sunny.UI.UILabel();
-            this.cbxLoaiban = new Sunny.UI.UIComboBox();
             this.uiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +73,42 @@
             this.uiPanel1.TabIndex = 20;
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbxLoaiban
+            // 
+            this.cbxLoaiban.BackColor = System.Drawing.Color.Transparent;
+            this.cbxLoaiban.DataSource = null;
+            this.cbxLoaiban.FillColor = System.Drawing.Color.White;
+            this.cbxLoaiban.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cbxLoaiban.ItemHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+            this.cbxLoaiban.Items.AddRange(new object[] {
+            "Pool",
+            "Libre"});
+            this.cbxLoaiban.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.cbxLoaiban.Location = new System.Drawing.Point(374, 505);
+            this.cbxLoaiban.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbxLoaiban.MinimumSize = new System.Drawing.Size(63, 0);
+            this.cbxLoaiban.Name = "cbxLoaiban";
+            this.cbxLoaiban.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.cbxLoaiban.Size = new System.Drawing.Size(703, 40);
+            this.cbxLoaiban.SymbolSize = 24;
+            this.cbxLoaiban.TabIndex = 31;
+            this.cbxLoaiban.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cbxLoaiban.Watermark = "Loại bàn";
+            // 
+            // uiLabel5
+            // 
+            this.uiLabel5.AutoSize = true;
+            this.uiLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.uiLabel5.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.uiLabel5.Location = new System.Drawing.Point(368, 462);
+            this.uiLabel5.Margin = new System.Windows.Forms.Padding(5);
+            this.uiLabel5.Name = "uiLabel5";
+            this.uiLabel5.Size = new System.Drawing.Size(126, 33);
+            this.uiLabel5.TabIndex = 33;
+            this.uiLabel5.Text = "Loại bàn";
+            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtPrice
             // 
@@ -124,6 +160,7 @@
             this.uiSymbolButton1.TabIndex = 10;
             this.uiSymbolButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiSymbolButton1.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.uiSymbolButton1.Click += new System.EventHandler(this.uiSymbolButton1_Click);
             // 
             // cbxStation
             // 
@@ -265,42 +302,6 @@
             this.btnXacnhan.Text = "Xác nhận";
             this.btnXacnhan.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
-            // 
-            // uiLabel5
-            // 
-            this.uiLabel5.AutoSize = true;
-            this.uiLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel5.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.uiLabel5.Location = new System.Drawing.Point(368, 462);
-            this.uiLabel5.Margin = new System.Windows.Forms.Padding(5);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(126, 33);
-            this.uiLabel5.TabIndex = 33;
-            this.uiLabel5.Text = "Loại bàn";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cbxLoaiban
-            // 
-            this.cbxLoaiban.BackColor = System.Drawing.Color.Transparent;
-            this.cbxLoaiban.DataSource = null;
-            this.cbxLoaiban.FillColor = System.Drawing.Color.White;
-            this.cbxLoaiban.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cbxLoaiban.ItemHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.cbxLoaiban.Items.AddRange(new object[] {
-            "Pool",
-            "Libre"});
-            this.cbxLoaiban.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.cbxLoaiban.Location = new System.Drawing.Point(374, 505);
-            this.cbxLoaiban.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbxLoaiban.MinimumSize = new System.Drawing.Size(63, 0);
-            this.cbxLoaiban.Name = "cbxLoaiban";
-            this.cbxLoaiban.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbxLoaiban.Size = new System.Drawing.Size(703, 40);
-            this.cbxLoaiban.SymbolSize = 24;
-            this.cbxLoaiban.TabIndex = 31;
-            this.cbxLoaiban.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cbxLoaiban.Watermark = "Loại bàn";
             // 
             // frmInfoban
             // 

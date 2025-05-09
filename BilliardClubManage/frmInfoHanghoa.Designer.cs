@@ -29,19 +29,21 @@
         private void InitializeComponent()
         {
             this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
-            this.uiComboBox1 = new Sunny.UI.UIComboBox();
-            this.uiTextBox4 = new Sunny.UI.UITextBox();
+            this.slDonvi = new Sunny.UI.UIComboBox();
+            this.txtTien = new Sunny.UI.UITextBox();
             this.uiLabel9 = new Sunny.UI.UILabel();
-            this.uiTextBox2 = new Sunny.UI.UITextBox();
+            this.txtTenHh = new Sunny.UI.UITextBox();
             this.uiLabel7 = new Sunny.UI.UILabel();
             this.uiLabel6 = new Sunny.UI.UILabel();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
-            this.uiButton5 = new Sunny.UI.UIButton();
+            this.txtID = new Sunny.UI.UITextBox();
+            this.btnXacnhan = new Sunny.UI.UIButton();
             this.uiPanel1 = new Sunny.UI.UIPanel();
-            this.uiButton1 = new Sunny.UI.UIButton();
+            this.txtSl = new Sunny.UI.UITextBox();
+            this.btnClear = new Sunny.UI.UIButton();
+            this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +51,7 @@
             // 
             this.uiSymbolButton1.BackColor = System.Drawing.Color.Transparent;
             this.uiSymbolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiSymbolButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.uiSymbolButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.uiSymbolButton1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uiSymbolButton1.Location = new System.Drawing.Point(20, 20);
@@ -63,49 +66,47 @@
             this.uiSymbolButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiSymbolButton1.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             // 
-            // uiComboBox1
+            // slDonvi
             // 
-            this.uiComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.uiComboBox1.DataSource = null;
-            this.uiComboBox1.FillColor = System.Drawing.Color.White;
-            this.uiComboBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiComboBox1.ItemHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-            this.uiComboBox1.Items.AddRange(new object[] {
+            this.slDonvi.BackColor = System.Drawing.Color.Transparent;
+            this.slDonvi.DataSource = null;
+            this.slDonvi.FillColor = System.Drawing.Color.White;
+            this.slDonvi.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.slDonvi.ItemHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+            this.slDonvi.Items.AddRange(new object[] {
             "Lon",
             "Chai",
-            "Cái",
-            "Kg"});
-            this.uiComboBox1.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-            this.uiComboBox1.Location = new System.Drawing.Point(374, 309);
-            this.uiComboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiComboBox1.MinimumSize = new System.Drawing.Size(63, 0);
-            this.uiComboBox1.Name = "uiComboBox1";
-            this.uiComboBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBox1.Size = new System.Drawing.Size(700, 50);
-            this.uiComboBox1.SymbolSize = 24;
-            this.uiComboBox1.TabIndex = 30;
-            this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiComboBox1.Watermark = "Đơn vị tính";
+            "Ly"});
+            this.slDonvi.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.slDonvi.Location = new System.Drawing.Point(374, 309);
+            this.slDonvi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.slDonvi.MinimumSize = new System.Drawing.Size(63, 0);
+            this.slDonvi.Name = "slDonvi";
+            this.slDonvi.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.slDonvi.Size = new System.Drawing.Size(700, 50);
+            this.slDonvi.SymbolSize = 24;
+            this.slDonvi.TabIndex = 30;
+            this.slDonvi.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.slDonvi.Watermark = "Đơn vị tính";
             // 
-            // uiTextBox4
+            // txtTien
             // 
-            this.uiTextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.uiTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTextBox4.Location = new System.Drawing.Point(374, 422);
-            this.uiTextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox4.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox4.Name = "uiTextBox4";
-            this.uiTextBox4.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox4.PasswordChar = '*';
-            this.uiTextBox4.Radius = 35;
-            this.uiTextBox4.ShowText = false;
-            this.uiTextBox4.Size = new System.Drawing.Size(703, 50);
-            this.uiTextBox4.TabIndex = 19;
-            this.uiTextBox4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox4.Watermark = "VND";
-            this.uiTextBox4.WatermarkActiveColor = System.Drawing.Color.Silver;
-            this.uiTextBox4.WordWarp = false;
+            this.txtTien.BackColor = System.Drawing.Color.Transparent;
+            this.txtTien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTien.Location = new System.Drawing.Point(374, 422);
+            this.txtTien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTien.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtTien.Name = "txtTien";
+            this.txtTien.Padding = new System.Windows.Forms.Padding(5);
+            this.txtTien.Radius = 35;
+            this.txtTien.ShowText = false;
+            this.txtTien.Size = new System.Drawing.Size(703, 50);
+            this.txtTien.TabIndex = 19;
+            this.txtTien.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtTien.Watermark = "VND";
+            this.txtTien.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtTien.WordWarp = false;
             // 
             // uiLabel9
             // 
@@ -120,23 +121,23 @@
             this.uiLabel9.TabIndex = 26;
             this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // uiTextBox2
+            // txtTenHh
             // 
-            this.uiTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.uiTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTextBox2.Location = new System.Drawing.Point(374, 196);
-            this.uiTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox2.Name = "uiTextBox2";
-            this.uiTextBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox2.Radius = 35;
-            this.uiTextBox2.ShowText = false;
-            this.uiTextBox2.Size = new System.Drawing.Size(700, 50);
-            this.uiTextBox2.TabIndex = 18;
-            this.uiTextBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox2.Watermark = "Tên hàng hóa";
-            this.uiTextBox2.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtTenHh.BackColor = System.Drawing.Color.Transparent;
+            this.txtTenHh.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenHh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTenHh.Location = new System.Drawing.Point(374, 196);
+            this.txtTenHh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTenHh.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtTenHh.Name = "txtTenHh";
+            this.txtTenHh.Padding = new System.Windows.Forms.Padding(5);
+            this.txtTenHh.Radius = 35;
+            this.txtTenHh.ShowText = false;
+            this.txtTenHh.Size = new System.Drawing.Size(700, 50);
+            this.txtTenHh.TabIndex = 18;
+            this.txtTenHh.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtTenHh.Watermark = "Tên hàng hóa";
+            this.txtTenHh.WatermarkActiveColor = System.Drawing.Color.Silver;
             // 
             // uiLabel7
             // 
@@ -205,57 +206,59 @@
             this.uiLabel1.TabIndex = 18;
             this.uiLabel1.Text = "Thông tin hàng hóa";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel1.Click += new System.EventHandler(this.uiLabel1_Click);
             // 
-            // uiTextBox1
+            // txtID
             // 
-            this.uiTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTextBox1.Location = new System.Drawing.Point(374, 93);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox1.Radius = 35;
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(700, 50);
-            this.uiTextBox1.TabIndex = 17;
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.Watermark = "Nhập ID";
-            this.uiTextBox1.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtID.BackColor = System.Drawing.Color.Transparent;
+            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtID.Location = new System.Drawing.Point(374, 93);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtID.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtID.Name = "txtID";
+            this.txtID.Padding = new System.Windows.Forms.Padding(5);
+            this.txtID.Radius = 35;
+            this.txtID.ShowText = false;
+            this.txtID.Size = new System.Drawing.Size(700, 50);
+            this.txtID.TabIndex = 17;
+            this.txtID.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtID.Watermark = "Nhập ID";
+            this.txtID.WatermarkActiveColor = System.Drawing.Color.Silver;
             // 
-            // uiButton5
+            // btnXacnhan
             // 
-            this.uiButton5.BackColor = System.Drawing.Color.Transparent;
-            this.uiButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton5.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.uiButton5.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiButton5.Location = new System.Drawing.Point(910, 511);
-            this.uiButton5.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton5.Name = "uiButton5";
-            this.uiButton5.Radius = 35;
-            this.uiButton5.Size = new System.Drawing.Size(164, 54);
-            this.uiButton5.TabIndex = 16;
-            this.uiButton5.Text = "Xác nhận";
-            this.uiButton5.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnXacnhan.BackColor = System.Drawing.Color.Transparent;
+            this.btnXacnhan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXacnhan.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnXacnhan.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacnhan.Location = new System.Drawing.Point(913, 619);
+            this.btnXacnhan.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnXacnhan.Name = "btnXacnhan";
+            this.btnXacnhan.Radius = 35;
+            this.btnXacnhan.Size = new System.Drawing.Size(164, 54);
+            this.btnXacnhan.TabIndex = 16;
+            this.btnXacnhan.Text = "Xác nhận";
+            this.btnXacnhan.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
             // uiPanel1
             // 
             this.uiPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.uiPanel1.Controls.Add(this.uiButton1);
+            this.uiPanel1.Controls.Add(this.txtSl);
+            this.uiPanel1.Controls.Add(this.btnClear);
+            this.uiPanel1.Controls.Add(this.uiLabel4);
             this.uiPanel1.Controls.Add(this.uiSymbolButton1);
-            this.uiPanel1.Controls.Add(this.uiComboBox1);
-            this.uiPanel1.Controls.Add(this.uiTextBox4);
+            this.uiPanel1.Controls.Add(this.slDonvi);
+            this.uiPanel1.Controls.Add(this.txtTien);
             this.uiPanel1.Controls.Add(this.uiLabel9);
-            this.uiPanel1.Controls.Add(this.uiTextBox2);
+            this.uiPanel1.Controls.Add(this.txtTenHh);
             this.uiPanel1.Controls.Add(this.uiLabel7);
             this.uiPanel1.Controls.Add(this.uiLabel6);
             this.uiPanel1.Controls.Add(this.uiLabel3);
             this.uiPanel1.Controls.Add(this.uiLabel2);
             this.uiPanel1.Controls.Add(this.uiLabel1);
-            this.uiPanel1.Controls.Add(this.uiTextBox1);
-            this.uiPanel1.Controls.Add(this.uiButton5);
+            this.uiPanel1.Controls.Add(this.txtID);
+            this.uiPanel1.Controls.Add(this.btnXacnhan);
             this.uiPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(234)))), ((int)(((byte)(218)))));
             this.uiPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiPanel1.Location = new System.Drawing.Point(0, 0);
@@ -268,20 +271,53 @@
             this.uiPanel1.Text = null;
             this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // uiButton1
+            // txtSl
             // 
-            this.uiButton1.BackColor = System.Drawing.Color.Transparent;
-            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.uiButton1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiButton1.Location = new System.Drawing.Point(727, 511);
-            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton1.Name = "uiButton1";
-            this.uiButton1.Radius = 35;
-            this.uiButton1.Size = new System.Drawing.Size(164, 54);
-            this.uiButton1.TabIndex = 31;
-            this.uiButton1.Text = "Nhập lại";
-            this.uiButton1.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtSl.BackColor = System.Drawing.Color.Transparent;
+            this.txtSl.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtSl.Location = new System.Drawing.Point(374, 535);
+            this.txtSl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSl.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtSl.Name = "txtSl";
+            this.txtSl.Padding = new System.Windows.Forms.Padding(5);
+            this.txtSl.Radius = 35;
+            this.txtSl.ShowText = false;
+            this.txtSl.Size = new System.Drawing.Size(703, 50);
+            this.txtSl.TabIndex = 25;
+            this.txtSl.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtSl.Watermark = "Số Lượng";
+            this.txtSl.WatermarkActiveColor = System.Drawing.Color.Silver;
+            this.txtSl.WordWarp = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClear.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(730, 619);
+            this.btnClear.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Radius = 35;
+            this.btnClear.Size = new System.Drawing.Size(164, 54);
+            this.btnClear.TabIndex = 31;
+            this.btnClear.Text = "Nhập lại";
+            this.btnClear.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            // 
+            // uiLabel4
+            // 
+            this.uiLabel4.AutoSize = true;
+            this.uiLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.uiLabel4.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.uiLabel4.Location = new System.Drawing.Point(368, 487);
+            this.uiLabel4.Margin = new System.Windows.Forms.Padding(10);
+            this.uiLabel4.Name = "uiLabel4";
+            this.uiLabel4.Size = new System.Drawing.Size(143, 33);
+            this.uiLabel4.TabIndex = 26;
+            this.uiLabel4.Text = "Số lượng:";
+            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmInfoHanghoa
             // 
@@ -294,6 +330,7 @@
             this.Name = "frmInfoHanghoa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmInfoHanghoa";
+            this.Load += new System.EventHandler(this.frmInfoHanghoa_Load);
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -302,18 +339,20 @@
 
         #endregion
         private Sunny.UI.UISymbolButton uiSymbolButton1;
-        private Sunny.UI.UIComboBox uiComboBox1;
-        private Sunny.UI.UITextBox uiTextBox4;
+        private Sunny.UI.UIComboBox slDonvi;
+        private Sunny.UI.UITextBox txtTien;
         private Sunny.UI.UILabel uiLabel9;
-        private Sunny.UI.UITextBox uiTextBox2;
+        private Sunny.UI.UITextBox txtTenHh;
         private Sunny.UI.UILabel uiLabel7;
         private Sunny.UI.UILabel uiLabel6;
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UITextBox uiTextBox1;
-        private Sunny.UI.UIButton uiButton5;
+        private Sunny.UI.UITextBox txtID;
+        private Sunny.UI.UIButton btnXacnhan;
         private Sunny.UI.UIPanel uiPanel1;
-        private Sunny.UI.UIButton uiButton1;
+        private Sunny.UI.UIButton btnClear;
+        private Sunny.UI.UITextBox txtSl;
+        private Sunny.UI.UILabel uiLabel4;
     }
 }

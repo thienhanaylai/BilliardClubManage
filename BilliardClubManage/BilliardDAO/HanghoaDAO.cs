@@ -21,7 +21,7 @@ namespace BilliardClubManage.BilliardDAO
         {
             List<Hanghoa> listHangHoa = new List<Hanghoa>();
             DataProvider.Connect();
-            string sql = "select * from Hanghoa";
+            string sql = "select hanghoa.*,kho.Soluong from hanghoa left join kho on hanghoa.IDhanghoa = kho.IDhanghoa";
             SqlDataReader rd = DataProvider.SqlDataReader(sql);
             while (rd.Read())
             {
@@ -37,16 +37,7 @@ namespace BilliardClubManage.BilliardDAO
                         hanghoa.Donvi = "Chai";
                         break;
                     case 3:
-                        hanghoa.Donvi = "Hop";
-                        break;
-                    case 4:
-                        hanghoa.Donvi = "Thung";
-                        break;
-                    case 5:
-                        hanghoa.Donvi = "Goi";
-                        break;
-                    case 6:
-                        hanghoa.Donvi = "Khac";
+                        hanghoa.Donvi = "Ly";
                         break;
                     default:
                         hanghoa.Donvi = "Lon";
@@ -54,6 +45,7 @@ namespace BilliardClubManage.BilliardDAO
                 }
 
                 hanghoa.Gia = rd.GetInt32(3);
+                hanghoa.Soluong = rd.IsDBNull(4) ? 0 : rd.GetInt32(4);
                 listHangHoa.Add(hanghoa);
             }
             DataProvider.Close();
@@ -63,7 +55,7 @@ namespace BilliardClubManage.BilliardDAO
         public Hanghoa getHangHoabyID(string id)
         {
             DataProvider.Connect();
-            string sql = "select * from Hanghoa where IDhanghoa = N'" + id + "'";
+            string sql = "select hanghoa.*,kho.Soluong from hanghoa left join kho on hanghoa.IDhanghoa = kho.IDhanghoa where hanghoa.IDhanghoa = N'" + id + "'";
             SqlDataReader rd = DataProvider.SqlDataReader(sql);
             Hanghoa hh = new Hanghoa();
             if (rd.Read())
@@ -79,22 +71,14 @@ namespace BilliardClubManage.BilliardDAO
                         hh.Donvi = "Chai";
                         break;
                     case 3:
-                        hh.Donvi = "Hop";
-                        break;
-                    case 4:
-                        hh.Donvi = "Thung";
-                        break;
-                    case 5:
-                        hh.Donvi = "Goi";
-                        break;
-                    case 6:
-                        hh.Donvi = "Khac";
+                        hh.Donvi = "Ly";
                         break;
                     default:
                         hh.Donvi = "Lon";
                         break;
                 }
                 hh.Gia = rd.GetInt32(3);
+                hh.Soluong = rd.IsDBNull(4) ? 0 : rd.GetInt32(4);
             }
             DataProvider.Close();
             return hh;
@@ -112,17 +96,8 @@ namespace BilliardClubManage.BilliardDAO
                 case "Chai":
                     dv = 2;
                     break;
-                case "Hop":
+                case "Ly":
                     dv = 3;
-                    break;
-                case "Thung":
-                    dv = 4;
-                    break;
-                case "Goi":
-                    dv = 5;
-                    break;
-                case "Khac":
-                    dv = 6;
                     break;
                 default:
                     dv = 1;
@@ -149,23 +124,15 @@ namespace BilliardClubManage.BilliardDAO
                 case "Chai":
                     dv = 2;
                     break;
-                case "Hop":
+                case "Ly":
                     dv = 3;
-                    break;
-                case "Thung":
-                    dv = 4;
-                    break;
-                case "Goi":
-                    dv = 5;
-                    break;
-                case "Khac":
-                    dv = 6;
                     break;
                 default:
                     dv = 1;
                     break;
             }
             string sql = "update Hanghoa set Tenhanghoa=N'" + hh.Tenhanghoa + "',Donvi=N'" + dv + "',Gia=" + hh.Gia + " where IDhanghoa=N'" + hh.IDhanghoa + "'";
+          
             int kq = DataProvider.ExecuteNonQuery(sql);
             DataProvider.Close();
             if (kq > 0)

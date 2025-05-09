@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 using BilliardClubManage.BilliardDTO;
 using BilliardClubManage.Properties;
 using Sunny.UI;
@@ -57,6 +58,9 @@ namespace BilliardClubManage
 
             card.Controls.Add(img);
             card.Controls.Add(ten);
+            card.Click += (s, e) => openBan(ban);
+            img.Click += (s, e) => openBan(ban);
+            ten.Click += (s, e) => openBan(ban);
             return card;
         }
         //ham filter sap xep danh sach ban theo trnag thai ban trong va ban dang su dung
@@ -79,6 +83,12 @@ namespace BilliardClubManage
             }
             return LstFilltered;
 
+        }
+
+        private void openBan(Ban ban)
+        {
+            frmTinhgio f = new frmTinhgio(ban);
+            f.ShowDialog();
         }
 
         private void uiFlowLayoutPanel1_Load(object sender, EventArgs e)

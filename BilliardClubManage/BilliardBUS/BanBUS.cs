@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Shapes;
 using BilliardClubManage.BilliardDAO;
 using BilliardClubManage.BilliardDTO;
 
@@ -28,6 +30,16 @@ namespace BilliardClubBUS
 
         public static bool insertBan(Ban ban)
         {
+            if(ban.IDban == "")
+            {
+                if(ban.Loaiban == "Pool")
+                {
+                    ban.IDban = "L" + new unity().getID("seqLo");
+                } else if(ban.Loaiban == "Libre")
+                {
+                    ban.IDban = "P" + new unity().getID("seqLo");
+                }
+            }
             return new BanDAO().insertBan(ban);
         }
 

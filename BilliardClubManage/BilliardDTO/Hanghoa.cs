@@ -12,6 +12,7 @@ namespace BilliardClubManage.BilliardDTO
         private string tenhanghoa;
         private string donvi;
         private int gia;
+        private int? soluong;
 
         public Hanghoa() { }
 
@@ -27,5 +28,6 @@ namespace BilliardClubManage.BilliardDTO
         public string Tenhanghoa { get => tenhanghoa; set => tenhanghoa = value; }
         public string Donvi { get => donvi; set => donvi = value; }
         public int Gia { get => gia; set => gia = value; }
+        public int? Soluong { get => soluong; set => soluong = value; }
     }
 }

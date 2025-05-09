@@ -92,11 +92,12 @@
     <Compile Include="BilliardDAO\KhachhangDAO.cs" />
     <Compile Include="BilliardDAO\KhoDAO.cs" />
     <Compile Include="BilliardDAO\NhanvienDAO.cs" />
+    <Compile Include="BilliardDAO\unity.cs" />
     <Compile Include="BilliardDTO\Ban.cs" />
     <Compile Include="BilliardDTO\Hanghoa.cs" />
     <Compile Include="BilliardDTO\Hoadon.cs" />
-    <Compile Include="BilliardDTO\IHanghoa.cs" />
     <Compile Include="BilliardDTO\Khachhang.cs" />
+    <Compile Include="BilliardDTO\Kho.cs" />
     <Compile Include="BilliardDTO\Nhanvien.cs" />
     <Compile Include="frmInfoHanghoa.cs">
       <SubType>Form</SubType>
@@ -121,6 +122,12 @@
     </Compile>
     <Compile Include="frmListBan.Designer.cs">
       <DependentUpon>frmListBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListOder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListOder.Designer.cs">
+      <DependentUpon>frmListOder.cs</DependentUpon>
     </Compile>
     <Compile Include="frmQuanlyDoanhthu.cs">
       <SubType>Form</SubType>
@@ -176,6 +183,12 @@
     <Compile Include="frmQuanlyban.Designer.cs">
       <DependentUpon>frmQuanlyban.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTinhgio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTinhgio.Designer.cs">
+      <DependentUpon>frmTinhgio.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmXuatHanghoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmListBan.resx">
       <DependentUpon>frmListBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListOder.resx">
+      <DependentUpon>frmListOder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanlyDoanhthu.resx">
       <DependentUpon>frmQuanlyDoanhthu.cs</DependentUpon>
@@ -222,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmQuanlyban.resx">
       <DependentUpon>frmQuanlyban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTinhgio.resx">
+      <DependentUpon>frmTinhgio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmXuatHanghoa.resx">
       <DependentUpon>frmXuatHanghoa.cs</DependentUpon>

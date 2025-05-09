@@ -36,11 +36,13 @@
             // btnK1
             // 
             this.btnK1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnK1.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnK1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnK1.Location = new System.Drawing.Point(12, 12);
             this.btnK1.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnK1.Name = "btnK1";
             this.btnK1.Radius = 35;
+            this.btnK1.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnK1.Size = new System.Drawing.Size(150, 60);
             this.btnK1.TabIndex = 3;
             this.btnK1.Text = "Khu 1";
@@ -50,11 +52,13 @@
             // btnK2
             // 
             this.btnK2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnK2.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnK2.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnK2.Location = new System.Drawing.Point(168, 12);
             this.btnK2.MinimumSize = new System.Drawing.Size(1, 1);
             this.btnK2.Name = "btnK2";
             this.btnK2.Radius = 35;
+            this.btnK2.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnK2.Size = new System.Drawing.Size(150, 60);
             this.btnK2.TabIndex = 4;
             this.btnK2.Text = "Khu 2";
