@@ -1,6 +1,6 @@
 ﻿USE [master]
 GO
-/****** Object:  Database [BilliardClub]    Script Date: 24/03/2025 12:26:57 PM ******/
+/****** Object:  Database [BilliardClub]    Script Date: 09/05/2025 9:01:11 AM ******/
 CREATE DATABASE [BilliardClub]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -84,7 +84,84 @@ ALTER DATABASE [BilliardClub] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEA
 GO
 USE [BilliardClub]
 GO
-/****** Object:  Table [dbo].[ban]    Script Date: 24/03/2025 12:26:57 PM ******/
+USE [BilliardClub]
+GO
+/****** Object:  Sequence [dbo].[seqChai]    Script Date: 09/05/2025 9:01:11 AM ******/
+CREATE SEQUENCE [dbo].[seqChai] 
+ AS [bigint]
+ START WITH 1
+ INCREMENT BY 1
+ MINVALUE -9223372036854775808
+ MAXVALUE 9223372036854775807
+ CACHE 
+GO
+USE [BilliardClub]
+GO
+/****** Object:  Sequence [dbo].[seqIdBan]    Script Date: 09/05/2025 9:01:11 AM ******/
+CREATE SEQUENCE [dbo].[seqIdBan] 
+ AS [bigint]
+ START WITH 1
+ INCREMENT BY 1
+ MINVALUE -9223372036854775808
+ MAXVALUE 9223372036854775807
+ CACHE 
+GO
+USE [BilliardClub]
+GO
+/****** Object:  Sequence [dbo].[seqIdBanNew]    Script Date: 09/05/2025 9:01:11 AM ******/
+CREATE SEQUENCE [dbo].[seqIdBanNew] 
+ AS [bigint]
+ START WITH 1
+ INCREMENT BY 1
+ MINVALUE -9223372036854775808
+ MAXVALUE 9223372036854775807
+ CACHE 
+GO
+USE [BilliardClub]
+GO
+/****** Object:  Sequence [dbo].[seqLo]    Script Date: 09/05/2025 9:01:11 AM ******/
+CREATE SEQUENCE [dbo].[seqLo] 
+ AS [bigint]
+ START WITH 1
+ INCREMENT BY 1
+ MINVALUE -9223372036854775808
+ MAXVALUE 9223372036854775807
+ CACHE 
+GO
+USE [BilliardClub]
+GO
+/****** Object:  Sequence [dbo].[seqLon]    Script Date: 09/05/2025 9:01:11 AM ******/
+CREATE SEQUENCE [dbo].[seqLon] 
+ AS [bigint]
+ START WITH 1
+ INCREMENT BY 1
+ MINVALUE -9223372036854775808
+ MAXVALUE 9223372036854775807
+ CACHE 
+GO
+USE [BilliardClub]
+GO
+/****** Object:  Sequence [dbo].[seqLy]    Script Date: 09/05/2025 9:01:11 AM ******/
+CREATE SEQUENCE [dbo].[seqLy] 
+ AS [bigint]
+ START WITH 1
+ INCREMENT BY 1
+ MINVALUE -9223372036854775808
+ MAXVALUE 9223372036854775807
+ CACHE 
+GO
+USE [BilliardClub]
+GO
+/****** Object:  Sequence [dbo].[seqPhang]    Script Date: 09/05/2025 9:01:11 AM ******/
+CREATE SEQUENCE [dbo].[seqPhang] 
+ AS [bigint]
+ START WITH 1
+ INCREMENT BY 1
+ MINVALUE -9223372036854775808
+ MAXVALUE 9223372036854775807
+ CACHE 
+GO
+/****** Object:  Table [dbo].[ban]    Script Date: 09/05/2025 9:01:11 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -96,15 +173,15 @@ CREATE TABLE [dbo].[ban](
 	[Khuvuc] [nchar](10) NULL,
 	[GioBD] [datetime] NULL,
 	[GioKT] [datetime] NULL,
-	[Dongia] [money] NULL,
+	[Dongia] [int] NULL,
 	[Loaiban] [nchar](10) NULL,
-PRIMARY KEY CLUSTERED 
+ CONSTRAINT [PK__ban__8B2339D8676B12D9] PRIMARY KEY CLUSTERED 
 (
 	[IDban] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[chitietHoadon]    Script Date: 24/03/2025 12:26:57 PM ******/
+/****** Object:  Table [dbo].[chitietHoadon]    Script Date: 09/05/2025 9:01:11 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -117,7 +194,7 @@ CREATE TABLE [dbo].[chitietHoadon](
 	[Sogiochoi] [int] NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[hanghoa]    Script Date: 24/03/2025 12:26:57 PM ******/
+/****** Object:  Table [dbo].[hanghoa]    Script Date: 09/05/2025 9:01:11 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -126,14 +203,14 @@ CREATE TABLE [dbo].[hanghoa](
 	[IDhanghoa] [nchar](10) NOT NULL,
 	[Tenhanghoa] [nvarchar](30) NULL,
 	[Donvi] [int] NULL,
-	[Gia] [money] NULL,
-PRIMARY KEY CLUSTERED 
+	[Gia] [int] NULL,
+ CONSTRAINT [PK__hanghoa__BA0A5824746428A0] PRIMARY KEY CLUSTERED 
 (
 	[IDhanghoa] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[hoadon]    Script Date: 24/03/2025 12:26:57 PM ******/
+/****** Object:  Table [dbo].[hoadon]    Script Date: 09/05/2025 9:01:11 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -151,7 +228,7 @@ CREATE TABLE [dbo].[hoadon](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[khachhang]    Script Date: 24/03/2025 12:26:57 PM ******/
+/****** Object:  Table [dbo].[khachhang]    Script Date: 09/05/2025 9:01:11 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -166,7 +243,7 @@ CREATE TABLE [dbo].[khachhang](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[kho]    Script Date: 24/03/2025 12:26:57 PM ******/
+/****** Object:  Table [dbo].[kho]    Script Date: 09/05/2025 9:01:11 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -176,7 +253,7 @@ CREATE TABLE [dbo].[kho](
 	[Soluong] [int] NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[nhanvien]    Script Date: 24/03/2025 12:26:57 PM ******/
+/****** Object:  Table [dbo].[nhanvien]    Script Date: 09/05/2025 9:01:11 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -225,7 +302,44 @@ REFERENCES [dbo].[hanghoa] ([IDhanghoa])
 GO
 ALTER TABLE [dbo].[kho] CHECK CONSTRAINT [FK_kho_hanghoa]
 GO
-/****** Object:  StoredProcedure [dbo].[ThemNhanVienNgauNhien]    Script Date: 24/03/2025 12:26:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[dropBan]    Script Date: 09/05/2025 9:01:11 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[dropBan] @id nchar(10)
+as
+begin
+	DELETE FROM ban WHERE IDban = @id
+end
+GO
+/****** Object:  StoredProcedure [dbo].[dropNV]    Script Date: 09/05/2025 9:01:11 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[dropNV] @id nchar(10)
+as
+begin
+DELETE FROM nhanvien WHERE IDnv = @id
+end
+GO
+/****** Object:  StoredProcedure [dbo].[insertBan]    Script Date: 09/05/2025 9:01:11 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[insertBan] @id nchar(10),@name nvarchar(20),@tinhtrang bit,@khuvuc nchar(10),@giobd datetime = NULL,@giokt datetime = NULL,@gia int,@loaiban nchar(10)
+as
+begin
+	if @giobd = '1900-01-01 00:00:00.000'
+		set @giobd = null;
+	if @giokt = '1900-01-01 00:00:00.000'
+		set @giokt = null;
+	insert into ban	values( @id, @name,@tinhtrang,@khuvuc, @giobd,@giokt,@gia, @loaiban)
+end
+GO
+/****** Object:  StoredProcedure [dbo].[ThemNhanVienNgauNhien]    Script Date: 09/05/2025 9:01:11 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -268,7 +382,7 @@ BEGIN
     END;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[ThemNhanVienNgauNhien1]    Script Date: 24/03/2025 12:26:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[ThemNhanVienNgauNhien1]    Script Date: 09/05/2025 9:01:11 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -311,7 +425,7 @@ BEGIN
     END;
 END;
 GO
-/****** Object:  StoredProcedure [dbo].[ThemNhanVienNgauNhien2]    Script Date: 24/03/2025 12:26:57 PM ******/
+/****** Object:  StoredProcedure [dbo].[ThemNhanVienNgauNhien2]    Script Date: 09/05/2025 9:01:11 AM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -353,6 +467,36 @@ BEGIN
         SET @i = @i + 1;
     END;
 END;
+GO
+/****** Object:  StoredProcedure [dbo].[updateBan]    Script Date: 09/05/2025 9:01:11 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[updateBan] @id nchar(10),@name nvarchar(20),@tinhtrang bit,@khuvuc nchar(10),@giobd datetime = NULL,@giokt datetime = NULL,@gia int,@loaiban nchar(10)
+as
+begin
+	if @giobd = '1900-01-01 00:00:00.000'
+		set @giobd = null;
+	if @giokt = '1900-01-01 00:00:00.000'
+		set @giokt = null;
+	update ban
+	set IDban = @id,Tenban = @name,Tinhtrang = @tinhtrang, Khuvuc = @khuvuc,GioBD = @giobd, GioKT = @giokt, Dongia = @gia,Loaiban = @loaiban
+	where IDban = @id
+end
+GO
+/****** Object:  StoredProcedure [dbo].[updateNV]    Script Date: 09/05/2025 9:01:11 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create proc [dbo].[updateNV] @id nchar(10), @ho nvarchar(20), @ten nvarchar(50), @ngaysinh date, @gioitinh bit, @chucvu nchar(10), @matkhau nchar(50)
+as
+begin
+update nhanvien
+set IDnv = @id,Ho = @ho ,Ten = @ten,Ngaysinh = @ngaysinh, Gioitinh = @gioitinh, Chucvu = @chucvu,Matkhau = @matkhau
+where IDnv = @id
+end
 GO
 USE [master]
 GO
