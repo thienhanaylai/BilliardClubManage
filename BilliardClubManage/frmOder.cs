@@ -78,7 +78,7 @@ namespace BilliardClubManage
                     img.BackgroundImage = Properties.Resources.chai;
                     break;
                 case "Goi":
-                    img.BackgroundImage = Properties.Resources.restaurant_1;
+                    img.BackgroundImage = Properties.Resources.chai;
                     break;
                 default:
                     img.BackgroundImage = Properties.Resources.chai;
@@ -264,6 +264,12 @@ namespace BilliardClubManage
             {
                 MessageBox.Show("Vui lòng chọn một dòng trong bảng.");
             }
+        }
+
+        private void uiSymbolButton2_Click(object sender, EventArgs e)
+        {
+            orderItems.Clear();
+            LoadData();
         }
     }
 }

@@ -88,7 +88,7 @@ namespace BilliardClubManage
         private void openBan(Ban ban)
         {
             frmTinhgio f = new frmTinhgio(ban);
-            f.ShowDialog();
+            f.Show();
         }
 
         private void uiFlowLayoutPanel1_Load(object sender, EventArgs e)

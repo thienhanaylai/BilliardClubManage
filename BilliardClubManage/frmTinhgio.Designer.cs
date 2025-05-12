@@ -117,6 +117,7 @@
             this.btnDongBan.TabIndex = 43;
             this.btnDongBan.Text = "Đóng bàn";
             this.btnDongBan.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnDongBan.Click += new System.EventHandler(this.btnDongBan_Click);
             // 
             // btnMoBan
             // 
@@ -132,6 +133,7 @@
             this.btnMoBan.TabIndex = 42;
             this.btnMoBan.Text = "Mở bàn";
             this.btnMoBan.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnMoBan.Click += new System.EventHandler(this.btnMoBan_Click);
             // 
             // uiLabel8
             // 

@@ -86,7 +86,14 @@ namespace BilliardClubManage
                     khuvuc = "Vip 1";
                     break;
             }
-            dongia = Convert.ToInt32(txtPrice.Text);
+            if(txtPrice.Text == "")
+            {
+                dongia = 0;
+            } else
+            {
+                dongia = Convert.ToInt32(txtPrice.Text);
+            }
+            
             switch (cbxLoaiban.Text)
             {
                 case "Pool":

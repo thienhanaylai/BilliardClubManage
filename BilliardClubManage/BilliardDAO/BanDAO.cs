@@ -104,7 +104,6 @@ namespace BilliardClubManage.BilliardDAO
 
         public bool updateBan(Ban ban)
         {
-           
             string sql = "exec updateBan '" + ban.IDban + "','" + ban.Tenban + "'," + ban.Tinhtrang + ",'" + ban.Khuvuc + "','" + ((object)ban.GioBD ?? DBNull.Value) + "','" + ((object)ban.GioKT ?? DBNull.Value) + "'," + ban.Dongia + ",'" + ban.Loaiban + "'";
             dataProvider.Connect();
             int kq = dataProvider.ExecuteNonQuery(sql);
@@ -113,6 +112,31 @@ namespace BilliardClubManage.BilliardDAO
                 return true;
             else
                 return false;
+        }
+
+        public bool updateGio(Ban ban)
+        {
+            string sql = "exec updateBan '" + ban.IDban + "','" + ban.Tenban + "'," + ban.Tinhtrang + ",'" + ban.Khuvuc + "','" + ((object)ban.GioBD ?? DBNull.Value) + "','" + ((object)ban.GioKT ?? DBNull.Value) + "'," + ban.Dongia + ",'" + ban.Loaiban + "'";
+            if (ban.Tinhtrang == true)
+            {
+                string giobd = ((DateTime)ban.GioBD).ToString("yyyy-MM-dd HH:mm:ss");
+                sql = "exec updateBan '" + ban.IDban + "','" + ban.Tenban + "'," + ban.Tinhtrang + ",'" + ban.Khuvuc + "','" + giobd + "','" + ((object)ban.GioKT ?? DBNull.Value) + "'," + ban.Dongia + ",'" + ban.Loaiban + "'";
+            } else
+            {
+                string giobd = ((DateTime)ban.GioBD).ToString("yyyy-MM-dd HH:mm:ss");
+                string giokt = ((DateTime)ban.GioKT).ToString("yyyy-MM-dd HH:mm:ss");
+                sql = "exec updateBan '" + ban.IDban + "','" + ban.Tenban + "'," + ban.Tinhtrang + ",'" + ban.Khuvuc + "','" + giobd + "','" + giokt + "'," + ban.Dongia + ",'" + ban.Loaiban + "'";
+
+            }
+
+            dataProvider.Connect();
+            int kq = dataProvider.ExecuteNonQuery(sql);
+            dataProvider.Close();
+            if (kq > 0)
+                return true;
+            else
+                return false;
+
         }
 
         public bool deleteBan(string id)

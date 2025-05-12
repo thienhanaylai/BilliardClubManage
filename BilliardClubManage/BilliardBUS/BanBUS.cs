@@ -48,6 +48,11 @@ namespace BilliardClubBUS
             return new BanDAO().updateBan(ban);
         }
 
+        public static bool updateGio(Ban ban)
+        {
+            return new BanDAO().updateGio(ban);
+        }
+
         public static bool deleteBan(string id)
         {
             return new BanDAO().deleteBan(id);
