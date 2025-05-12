@@ -25,4 +25,3 @@ C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\obj\Debug\Billi
 C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\obj\Debug\BilliardClubManage.frmQuanlyNhansu.resources
 C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\obj\Debug\BilliardClubManage.frmListBan.resources
 C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\obj\Debug\BilliardClubManage.frmTinhgio.resources
-C:\Users\paoo\source\repos\BilliardClubManage\BilliardClubManage\obj\Debug\BilliardClubManage.frmListOder.resources

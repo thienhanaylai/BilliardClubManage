@@ -83,6 +83,7 @@
             this.dgvKho.Location = new System.Drawing.Point(12, 82);
             this.dgvKho.Name = "dgvKho";
             this.dgvKho.ReadOnly = true;
+            this.dgvKho.RowTemplate.Height = 35;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);

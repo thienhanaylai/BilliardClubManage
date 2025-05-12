@@ -76,7 +76,9 @@
             this.slDonvi.Items.AddRange(new object[] {
             "Lon",
             "Chai",
-            "Ly"});
+            "Ly",
+            "Goi",
+            "Dia"});
             this.slDonvi.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.slDonvi.Location = new System.Drawing.Point(374, 309);
             this.slDonvi.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

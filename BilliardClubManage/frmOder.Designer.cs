@@ -34,8 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiPanel2 = new Sunny.UI.UIPanel();
-            this.uiTextBox1 = new Sunny.UI.UITextBox();
-            this.uiSymbolButton4 = new Sunny.UI.UISymbolButton();
+            this.txtThanhTien = new Sunny.UI.UILabel();
+            this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
             this.uiSymbolButton3 = new Sunny.UI.UISymbolButton();
             this.uiSymbolButton2 = new Sunny.UI.UISymbolButton();
@@ -44,20 +44,19 @@
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLine1 = new Sunny.UI.UILine();
             this.dgvOder = new Sunny.UI.UIDataGridView();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uiPanel1 = new Sunny.UI.UIPanel();
-            this.uiLabel2 = new Sunny.UI.UILabel();
-            this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiPanel3 = new Sunny.UI.UIPanel();
             this.ListOder = new Sunny.UI.UIPanel();
             this.btnFood = new Sunny.UI.UIImageButton();
             this.btnNuoc = new Sunny.UI.UIImageButton();
+            this.btnXoahh = new Sunny.UI.UISymbolButton();
+            this.btnTangsl = new Sunny.UI.UISymbolButton();
+            this.btnGiamsl = new Sunny.UI.UISymbolButton();
+            this.txtsl = new Sunny.UI.UITextBox();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tenhanghoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uiPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOder)).BeginInit();
-            this.uiPanel1.SuspendLayout();
-            this.ListOder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFood)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuoc)).BeginInit();
             this.SuspendLayout();
@@ -65,8 +64,12 @@
             // uiPanel2
             // 
             this.uiPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.uiPanel2.Controls.Add(this.uiTextBox1);
-            this.uiPanel2.Controls.Add(this.uiSymbolButton4);
+            this.uiPanel2.Controls.Add(this.txtsl);
+            this.uiPanel2.Controls.Add(this.btnGiamsl);
+            this.uiPanel2.Controls.Add(this.btnTangsl);
+            this.uiPanel2.Controls.Add(this.btnXoahh);
+            this.uiPanel2.Controls.Add(this.txtThanhTien);
+            this.uiPanel2.Controls.Add(this.uiLabel1);
             this.uiPanel2.Controls.Add(this.uiSymbolButton1);
             this.uiPanel2.Controls.Add(this.uiSymbolButton3);
             this.uiPanel2.Controls.Add(this.uiSymbolButton2);
@@ -88,38 +91,27 @@
             this.uiPanel2.Text = "uiPanel2";
             this.uiPanel2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // uiTextBox1
+            // txtThanhTien
             // 
-            this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.uiTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiTextBox1.Location = new System.Drawing.Point(134, 685);
-            this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 16);
-            this.uiTextBox1.Name = "uiTextBox1";
-            this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox1.Radius = 35;
-            this.uiTextBox1.ShowText = false;
-            this.uiTextBox1.Size = new System.Drawing.Size(327, 70);
-            this.uiTextBox1.TabIndex = 10;
-            this.uiTextBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiTextBox1.Watermark = "Mã giảm giá";
+            this.txtThanhTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThanhTien.ForeColor = System.Drawing.Color.Maroon;
+            this.txtThanhTien.Location = new System.Drawing.Point(182, 700);
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.Size = new System.Drawing.Size(265, 47);
+            this.txtThanhTien.TabIndex = 10;
+            this.txtThanhTien.Text = "0 VND";
+            this.txtThanhTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // uiSymbolButton4
+            // uiLabel1
             // 
-            this.uiSymbolButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton4.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiSymbolButton4.Location = new System.Drawing.Point(5, 685);
-            this.uiSymbolButton4.Margin = new System.Windows.Forms.Padding(5);
-            this.uiSymbolButton4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolButton4.Name = "uiSymbolButton4";
-            this.uiSymbolButton4.Radius = 30;
-            this.uiSymbolButton4.Size = new System.Drawing.Size(120, 70);
-            this.uiSymbolButton4.Symbol = 560361;
-            this.uiSymbolButton4.SymbolOffset = new System.Drawing.Point(70, 0);
-            this.uiSymbolButton4.SymbolSize = 0;
-            this.uiSymbolButton4.TabIndex = 9;
-            this.uiSymbolButton4.Text = "Áp dụng";
-            this.uiSymbolButton4.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.uiLabel1.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.uiLabel1.Location = new System.Drawing.Point(3, 691);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(173, 60);
+            this.uiLabel1.TabIndex = 9;
+            this.uiLabel1.Text = "Thành tiền:";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // uiSymbolButton1
             // 
@@ -246,9 +238,11 @@
             this.dgvOder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvOder.ColumnHeadersVisible = false;
             this.dgvOder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colName,
-            this.colQty,
-            this.colPrice});
+            this.ID,
+            this.Tenhanghoa,
+            this.Soluong,
+            this.Gia});
+            this.dgvOder.RowTemplate.Height = 30;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -260,7 +254,7 @@
             this.dgvOder.EnableHeadersVisualStyles = false;
             this.dgvOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dgvOder.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
-            this.dgvOder.Location = new System.Drawing.Point(5, 12);
+            this.dgvOder.Location = new System.Drawing.Point(5, 53);
             this.dgvOder.Margin = new System.Windows.Forms.Padding(5);
             this.dgvOder.Name = "dgvOder";
             this.dgvOder.RectColor = System.Drawing.Color.Black;
@@ -283,86 +277,11 @@
             this.dgvOder.ScrollBarRectColor = System.Drawing.Color.Black;
             this.dgvOder.ScrollBarStyleInherited = false;
             this.dgvOder.SelectedIndex = -1;
-            this.dgvOder.Size = new System.Drawing.Size(456, 663);
+            this.dgvOder.Size = new System.Drawing.Size(456, 550);
             this.dgvOder.TabIndex = 0;
-            // 
-            // colName
-            // 
-            this.colName.Frozen = true;
-            this.colName.HeaderText = "Sản phẩm";
-            this.colName.MinimumWidth = 250;
-            this.colName.Name = "colName";
-            this.colName.Width = 250;
-            // 
-            // colQty
-            // 
-            this.colQty.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.colQty.HeaderText = "Số lượng";
-            this.colQty.Name = "colQty";
-            // 
-            // colPrice
-            // 
-            this.colPrice.HeaderText = "Giá";
-            this.colPrice.MinimumWidth = 100;
-            this.colPrice.Name = "colPrice";
-            // 
-            // uiPanel1
-            // 
-            this.uiPanel1.Controls.Add(this.uiLabel2);
-            this.uiPanel1.Controls.Add(this.uiLabel1);
-            this.uiPanel1.Controls.Add(this.uiPanel3);
-            this.uiPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiPanel1.Location = new System.Drawing.Point(10, 12);
-            this.uiPanel1.Margin = new System.Windows.Forms.Padding(10);
-            this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Radius = 15;
-            this.uiPanel1.Size = new System.Drawing.Size(150, 250);
-            this.uiPanel1.TabIndex = 3;
-            this.uiPanel1.Text = null;
-            this.uiPanel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiLabel2
-            // 
-            this.uiLabel2.AutoSize = true;
-            this.uiLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.uiLabel2.Location = new System.Drawing.Point(10, 221);
-            this.uiLabel2.Margin = new System.Windows.Forms.Padding(10);
-            this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(132, 19);
-            this.uiLabel2.TabIndex = 2;
-            this.uiLabel2.Text = "Giá: xx.xxx VND";
-            // 
-            // uiLabel1
-            // 
-            this.uiLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel1.ForeColor = System.Drawing.Color.Black;
-            this.uiLabel1.Location = new System.Drawing.Point(6, 170);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(104, 23);
-            this.uiLabel1.TabIndex = 1;
-            this.uiLabel1.Text = "name";
-            // 
-            // uiPanel3
-            // 
-            this.uiPanel3.BackgroundImage = global::BilliardClubManage.Properties.Resources.chai;
-            this.uiPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiPanel3.Location = new System.Drawing.Point(10, 10);
-            this.uiPanel3.Margin = new System.Windows.Forms.Padding(10);
-            this.uiPanel3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiPanel3.Name = "uiPanel3";
-            this.uiPanel3.Radius = 10;
-            this.uiPanel3.Size = new System.Drawing.Size(130, 150);
-            this.uiPanel3.TabIndex = 0;
-            this.uiPanel3.Text = "img";
-            this.uiPanel3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ListOder
             // 
-            this.ListOder.Controls.Add(this.uiPanel1);
             this.ListOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.ListOder.Location = new System.Drawing.Point(113, 14);
             this.ListOder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -407,6 +326,112 @@
             this.btnNuoc.Text = null;
             this.btnNuoc.Click += new System.EventHandler(this.btnNuoc_Click);
             // 
+            // btnXoahh
+            // 
+            this.btnXoahh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXoahh.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoahh.Location = new System.Drawing.Point(5, 613);
+            this.btnXoahh.Margin = new System.Windows.Forms.Padding(5);
+            this.btnXoahh.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnXoahh.Name = "btnXoahh";
+            this.btnXoahh.Radius = 40;
+            this.btnXoahh.Size = new System.Drawing.Size(89, 70);
+            this.btnXoahh.Symbol = 61453;
+            this.btnXoahh.SymbolOffset = new System.Drawing.Point(25, 0);
+            this.btnXoahh.SymbolSize = 48;
+            this.btnXoahh.TabIndex = 11;
+            this.btnXoahh.Text = "Xóa";
+            this.btnXoahh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoahh.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnXoahh.Click += new System.EventHandler(this.btnXoahh_Click);
+            // 
+            // btnTangsl
+            // 
+            this.btnTangsl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTangsl.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTangsl.Location = new System.Drawing.Point(104, 613);
+            this.btnTangsl.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTangsl.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnTangsl.Name = "btnTangsl";
+            this.btnTangsl.Radius = 31;
+            this.btnTangsl.Size = new System.Drawing.Size(70, 70);
+            this.btnTangsl.Symbol = 61543;
+            this.btnTangsl.SymbolOffset = new System.Drawing.Point(2, 5);
+            this.btnTangsl.SymbolSize = 48;
+            this.btnTangsl.TabIndex = 12;
+            this.btnTangsl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTangsl.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnTangsl.Click += new System.EventHandler(this.btnTangsl_Click);
+            // 
+            // btnGiamsl
+            // 
+            this.btnGiamsl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGiamsl.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiamsl.Location = new System.Drawing.Point(391, 613);
+            this.btnGiamsl.Margin = new System.Windows.Forms.Padding(5);
+            this.btnGiamsl.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnGiamsl.Name = "btnGiamsl";
+            this.btnGiamsl.Radius = 40;
+            this.btnGiamsl.Size = new System.Drawing.Size(70, 70);
+            this.btnGiamsl.Symbol = 61544;
+            this.btnGiamsl.SymbolOffset = new System.Drawing.Point(2, 5);
+            this.btnGiamsl.SymbolSize = 48;
+            this.btnGiamsl.TabIndex = 13;
+            this.btnGiamsl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGiamsl.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnGiamsl.Click += new System.EventHandler(this.btnGiamsl_Click);
+            // 
+            // txtsl
+            // 
+            this.txtsl.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtsl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtsl.Location = new System.Drawing.Point(179, 613);
+            this.txtsl.Margin = new System.Windows.Forms.Padding(0, 5, 4, 5);
+            this.txtsl.MinimumSize = new System.Drawing.Size(1, 16);
+            this.txtsl.Name = "txtsl";
+            this.txtsl.Padding = new System.Windows.Forms.Padding(0, 5, 5, 5);
+            this.txtsl.Radius = 20;
+            this.txtsl.ShowText = false;
+            this.txtsl.Size = new System.Drawing.Size(203, 70);
+            this.txtsl.TabIndex = 14;
+            this.txtsl.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtsl.Watermark = "Số lượng tăng, giảm";
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "IDhanghoa";
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 70;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 70;
+            // 
+            // Tenhanghoa
+            // 
+            this.Tenhanghoa.DataPropertyName = "Tenhanghoa";
+            this.Tenhanghoa.HeaderText = "Sản phẩm";
+            this.Tenhanghoa.MinimumWidth = 200;
+            this.Tenhanghoa.Name = "Tenhanghoa";
+            this.Tenhanghoa.ReadOnly = true;
+            this.Tenhanghoa.Width = 200;
+            // 
+            // Soluong
+            // 
+            this.Soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Soluong.DataPropertyName = "Soluong";
+            this.Soluong.HeaderText = "Số lượng";
+            this.Soluong.MinimumWidth = 100;
+            this.Soluong.Name = "Soluong";
+            this.Soluong.ReadOnly = true;
+            // 
+            // Gia
+            // 
+            this.Gia.DataPropertyName = "Gia";
+            this.Gia.HeaderText = "Giá";
+            this.Gia.MinimumWidth = 100;
+            this.Gia.Name = "Gia";
+            this.Gia.ReadOnly = true;
+            // 
             // frmOder
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -420,9 +445,6 @@
             this.Text = "frmOder";
             this.uiPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOder)).EndInit();
-            this.uiPanel1.ResumeLayout(false);
-            this.uiPanel1.PerformLayout();
-            this.ListOder.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFood)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnNuoc)).EndInit();
             this.ResumeLayout(false);
@@ -434,23 +456,24 @@
         private Sunny.UI.UIImageButton btnNuoc;
         private Sunny.UI.UIImageButton btnFood;
         private Sunny.UI.UIPanel uiPanel2;
-        private Sunny.UI.UIPanel uiPanel1;
-        private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UIPanel uiPanel3;
-        private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UIDataGridView dgvOder;
         private Sunny.UI.UILabel uiLabel5;
         private Sunny.UI.UILabel uiLabel4;
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UILine uiLine1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colQty;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
         private Sunny.UI.UISymbolButton uiSymbolButton2;
         private Sunny.UI.UISymbolButton uiSymbolButton3;
         private Sunny.UI.UISymbolButton uiSymbolButton1;
-        private Sunny.UI.UITextBox uiTextBox1;
-        private Sunny.UI.UISymbolButton uiSymbolButton4;
         private Sunny.UI.UIPanel ListOder;
+        private Sunny.UI.UILabel uiLabel1;
+        private Sunny.UI.UILabel txtThanhTien;
+        private Sunny.UI.UISymbolButton btnTangsl;
+        private Sunny.UI.UISymbolButton btnXoahh;
+        private Sunny.UI.UITextBox txtsl;
+        private Sunny.UI.UISymbolButton btnGiamsl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tenhanghoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
     }
 }
