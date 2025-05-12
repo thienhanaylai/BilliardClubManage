@@ -37,7 +37,7 @@ namespace BilliardClubBUS
                     ban.IDban = "L" + new unity().getID("seqLo");
                 } else if(ban.Loaiban == "Libre")
                 {
-                    ban.IDban = "P" + new unity().getID("seqLo");
+                    ban.IDban = "P" + new unity().getID("seqPhang");
                 }
             }
             return new BanDAO().insertBan(ban);

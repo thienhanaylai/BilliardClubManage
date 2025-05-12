@@ -24,7 +24,14 @@ namespace BilliardClubManage.BilliardDAO
         public void Connect()
         {
             //mở kết nối
-            connect.Open();
+            try
+            {
+                connect.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Loi ket noi database" + ex.Message);
+            }
         }   
 
         public void Close() {

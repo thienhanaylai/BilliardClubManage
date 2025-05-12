@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.uiImageButton1 = new Sunny.UI.UIImageButton();
-            this.uiImageButton2 = new Sunny.UI.UIImageButton();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiPanel2 = new Sunny.UI.UIPanel();
             this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiSymbolButton4 = new Sunny.UI.UISymbolButton();
@@ -45,7 +43,7 @@
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLine1 = new Sunny.UI.UILine();
-            this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
+            this.dgvOder = new Sunny.UI.UIDataGridView();
             this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,44 +52,15 @@
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiPanel3 = new Sunny.UI.UIPanel();
             this.ListOder = new Sunny.UI.UIPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).BeginInit();
+            this.btnFood = new Sunny.UI.UIImageButton();
+            this.btnNuoc = new Sunny.UI.UIImageButton();
             this.uiPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOder)).BeginInit();
             this.uiPanel1.SuspendLayout();
             this.ListOder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuoc)).BeginInit();
             this.SuspendLayout();
-            // 
-            // uiImageButton1
-            // 
-            this.uiImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.uiImageButton1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.uiImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiImageButton1.Image = global::BilliardClubManage.Properties.Resources.soda_1;
-            this.uiImageButton1.Location = new System.Drawing.Point(19, 19);
-            this.uiImageButton1.Margin = new System.Windows.Forms.Padding(10);
-            this.uiImageButton1.Name = "uiImageButton1";
-            this.uiImageButton1.Size = new System.Drawing.Size(80, 80);
-            this.uiImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton1.TabIndex = 0;
-            this.uiImageButton1.TabStop = false;
-            this.uiImageButton1.Text = null;
-            // 
-            // uiImageButton2
-            // 
-            this.uiImageButton2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.uiImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiImageButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiImageButton2.Image = global::BilliardClubManage.Properties.Resources.restaurant_1;
-            this.uiImageButton2.Location = new System.Drawing.Point(19, 119);
-            this.uiImageButton2.Margin = new System.Windows.Forms.Padding(10);
-            this.uiImageButton2.Name = "uiImageButton2";
-            this.uiImageButton2.Size = new System.Drawing.Size(80, 80);
-            this.uiImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.uiImageButton2.TabIndex = 1;
-            this.uiImageButton2.TabStop = false;
-            this.uiImageButton2.Text = null;
             // 
             // uiPanel2
             // 
@@ -105,7 +74,7 @@
             this.uiPanel2.Controls.Add(this.uiLabel4);
             this.uiPanel2.Controls.Add(this.uiLabel3);
             this.uiPanel2.Controls.Add(this.uiLine1);
-            this.uiPanel2.Controls.Add(this.uiDataGridView1);
+            this.uiPanel2.Controls.Add(this.dgvOder);
             this.uiPanel2.FillColor = System.Drawing.Color.Transparent;
             this.uiPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiPanel2.Location = new System.Drawing.Point(922, 14);
@@ -257,65 +226,65 @@
             this.uiLine1.Size = new System.Drawing.Size(456, 17);
             this.uiLine1.TabIndex = 4;
             // 
-            // uiDataGridView1
+            // dgvOder
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.uiDataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.uiDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.uiDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.uiDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.uiDataGridView1.ColumnHeadersHeight = 32;
-            this.uiDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.uiDataGridView1.ColumnHeadersVisible = false;
-            this.uiDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.dgvOder.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvOder.BackgroundColor = System.Drawing.Color.White;
+            this.dgvOder.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvOder.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvOder.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvOder.ColumnHeadersHeight = 32;
+            this.dgvOder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvOder.ColumnHeadersVisible = false;
+            this.dgvOder.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colName,
             this.colQty,
             this.colPrice});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.uiDataGridView1.EnableHeadersVisualStyles = false;
-            this.uiDataGridView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.uiDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.Location = new System.Drawing.Point(5, 12);
-            this.uiDataGridView1.Margin = new System.Windows.Forms.Padding(5);
-            this.uiDataGridView1.Name = "uiDataGridView1";
-            this.uiDataGridView1.RectColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.uiDataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.uiDataGridView1.ScrollBarColor = System.Drawing.Color.White;
-            this.uiDataGridView1.ScrollBarRectColor = System.Drawing.Color.Black;
-            this.uiDataGridView1.ScrollBarStyleInherited = false;
-            this.uiDataGridView1.SelectedIndex = -1;
-            this.uiDataGridView1.Size = new System.Drawing.Size(456, 663);
-            this.uiDataGridView1.TabIndex = 0;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOder.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvOder.EnableHeadersVisualStyles = false;
+            this.dgvOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dgvOder.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
+            this.dgvOder.Location = new System.Drawing.Point(5, 12);
+            this.dgvOder.Margin = new System.Windows.Forms.Padding(5);
+            this.dgvOder.Name = "dgvOder";
+            this.dgvOder.RectColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOder.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvOder.RowHeadersVisible = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.dgvOder.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvOder.ScrollBarColor = System.Drawing.Color.White;
+            this.dgvOder.ScrollBarRectColor = System.Drawing.Color.Black;
+            this.dgvOder.ScrollBarStyleInherited = false;
+            this.dgvOder.SelectedIndex = -1;
+            this.dgvOder.Size = new System.Drawing.Size(456, 663);
+            this.dgvOder.TabIndex = 0;
             // 
             // colName
             // 
@@ -347,7 +316,7 @@
             this.uiPanel1.Margin = new System.Windows.Forms.Padding(10);
             this.uiPanel1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel1.Name = "uiPanel1";
-            this.uiPanel1.Radius = 40;
+            this.uiPanel1.Radius = 15;
             this.uiPanel1.Size = new System.Drawing.Size(150, 250);
             this.uiPanel1.TabIndex = 3;
             this.uiPanel1.Text = null;
@@ -379,12 +348,13 @@
             // 
             // uiPanel3
             // 
+            this.uiPanel3.BackgroundImage = global::BilliardClubManage.Properties.Resources.chai;
             this.uiPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.uiPanel3.Location = new System.Drawing.Point(10, 10);
             this.uiPanel3.Margin = new System.Windows.Forms.Padding(10);
             this.uiPanel3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiPanel3.Name = "uiPanel3";
-            this.uiPanel3.Radius = 35;
+            this.uiPanel3.Radius = 10;
             this.uiPanel3.Size = new System.Drawing.Size(130, 150);
             this.uiPanel3.TabIndex = 0;
             this.uiPanel3.Text = "img";
@@ -400,7 +370,42 @@
             this.ListOder.Name = "ListOder";
             this.ListOder.Size = new System.Drawing.Size(800, 840);
             this.ListOder.TabIndex = 5;
+            this.ListOder.Text = null;
             this.ListOder.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ListOder.Load += new System.EventHandler(this.ListOder_Load);
+            // 
+            // btnFood
+            // 
+            this.btnFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnFood.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnFood.Image = global::BilliardClubManage.Properties.Resources.restaurant_1;
+            this.btnFood.Location = new System.Drawing.Point(19, 119);
+            this.btnFood.Margin = new System.Windows.Forms.Padding(10);
+            this.btnFood.Name = "btnFood";
+            this.btnFood.Size = new System.Drawing.Size(80, 80);
+            this.btnFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnFood.TabIndex = 1;
+            this.btnFood.TabStop = false;
+            this.btnFood.Text = null;
+            this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
+            // 
+            // btnNuoc
+            // 
+            this.btnNuoc.BackColor = System.Drawing.Color.Transparent;
+            this.btnNuoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnNuoc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNuoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnNuoc.Image = global::BilliardClubManage.Properties.Resources.soda_1;
+            this.btnNuoc.Location = new System.Drawing.Point(19, 19);
+            this.btnNuoc.Margin = new System.Windows.Forms.Padding(10);
+            this.btnNuoc.Name = "btnNuoc";
+            this.btnNuoc.Size = new System.Drawing.Size(80, 80);
+            this.btnNuoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnNuoc.TabIndex = 0;
+            this.btnNuoc.TabStop = false;
+            this.btnNuoc.Text = null;
+            this.btnNuoc.Click += new System.EventHandler(this.btnNuoc_Click);
             // 
             // frmOder
             // 
@@ -408,32 +413,32 @@
             this.ClientSize = new System.Drawing.Size(1402, 868);
             this.Controls.Add(this.ListOder);
             this.Controls.Add(this.uiPanel2);
-            this.Controls.Add(this.uiImageButton2);
-            this.Controls.Add(this.uiImageButton1);
+            this.Controls.Add(this.btnFood);
+            this.Controls.Add(this.btnNuoc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmOder";
             this.Text = "frmOder";
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uiImageButton2)).EndInit();
             this.uiPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOder)).EndInit();
             this.uiPanel1.ResumeLayout(false);
             this.uiPanel1.PerformLayout();
             this.ListOder.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnFood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuoc)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Sunny.UI.UIImageButton uiImageButton1;
-        private Sunny.UI.UIImageButton uiImageButton2;
+        private Sunny.UI.UIImageButton btnNuoc;
+        private Sunny.UI.UIImageButton btnFood;
         private Sunny.UI.UIPanel uiPanel2;
         private Sunny.UI.UIPanel uiPanel1;
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UIPanel uiPanel3;
         private Sunny.UI.UILabel uiLabel2;
-        private Sunny.UI.UIDataGridView uiDataGridView1;
+        private Sunny.UI.UIDataGridView dgvOder;
         private Sunny.UI.UILabel uiLabel5;
         private Sunny.UI.UILabel uiLabel4;
         private Sunny.UI.UILabel uiLabel3;

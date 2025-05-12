@@ -113,6 +113,16 @@ namespace BilliardClubManage.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chai {
+            get {
+                object obj = ResourceManager.GetObject("chai", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gradient {
             get {
                 object obj = ResourceManager.GetObject("gradient", resourceCulture);
@@ -126,6 +136,16 @@ namespace BilliardClubManage.Properties {
         internal static System.Drawing.Bitmap gradient__1_ {
             get {
                 object obj = ResourceManager.GetObject("gradient (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lon {
+            get {
+                object obj = ResourceManager.GetObject("lon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

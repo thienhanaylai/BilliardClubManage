@@ -15,6 +15,11 @@ namespace BilliardClubBUS
             return new HanghoaDAO().getListHangHoa();
         }
 
+        public static List<Hanghoa> getListHhByLoai(string loai)
+        {
+            return new HanghoaDAO().getListhhbyLoai(loai);
+        }
+
         public static bool insertHH(Hanghoa h)
         {
             return new HanghoaDAO().insertHanghoa(h);   
