@@ -99,6 +99,12 @@
     <Compile Include="BilliardDTO\Khachhang.cs" />
     <Compile Include="BilliardDTO\Kho.cs" />
     <Compile Include="BilliardDTO\Nhanvien.cs" />
+    <Compile Include="frmBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBill.Designer.cs">
+      <DependentUpon>frmBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInfoHanghoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBill.resx">
+      <DependentUpon>frmBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInfoHanghoa.resx">
       <DependentUpon>frmInfoHanghoa.cs</DependentUpon>
     </EmbeddedResource>

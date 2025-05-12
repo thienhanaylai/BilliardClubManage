@@ -114,5 +114,12 @@ namespace BilliardClubManage
                 btnMoBan.Enabled = false;
             }
         }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            List<Hanghoa> dshh = new List<Hanghoa>();
+            frmBill thanhtoan = new frmBill(ban,dshh);
+            thanhtoan.Show();
+        }
     }
 }

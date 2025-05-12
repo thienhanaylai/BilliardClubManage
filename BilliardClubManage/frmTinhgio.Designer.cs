@@ -102,6 +102,7 @@
             this.btnThanhToan.TabIndex = 45;
             this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // btnDongBan
             // 
