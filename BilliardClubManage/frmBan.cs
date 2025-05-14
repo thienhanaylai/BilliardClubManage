@@ -60,21 +60,21 @@ namespace BilliardClubManage
         {
             
             List<Ban> ds = BilliardClubBUS.BanBUS.getListBanByKhuVuc(convertKhuvuc(khuvuc));
-            OpenFormChild(new frmListBan(ds, khuvuc));
+            OpenFormChild(new frmListBan(ds, 0));
         }
 
         private void btnK1_Click(object sender, EventArgs e)
         {
             khuvuc = 1;
             List<Ban> ds = BilliardClubBUS.BanBUS.getListBanByKhuVuc(convertKhuvuc(khuvuc));
-            OpenFormChild(new frmListBan(ds, khuvuc));
+            OpenFormChild(new frmListBan(ds, 0));
         }
 
         private void btnK2_Click(object sender, EventArgs e)
         {
             khuvuc = 2;
             List<Ban> ds = BilliardClubBUS.BanBUS.getListBanByKhuVuc(convertKhuvuc(khuvuc));
-            OpenFormChild(new frmListBan(ds, khuvuc));
+            OpenFormChild(new frmListBan(ds, 0));
         }
     }
 }

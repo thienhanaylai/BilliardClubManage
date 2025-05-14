@@ -40,5 +40,6 @@ namespace BilliardClubBUS
         {
             return new HanghoaDAO().deleteHanghoa(id);
         }   
+
     }
 }

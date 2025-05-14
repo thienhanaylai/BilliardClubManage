@@ -15,6 +15,7 @@ namespace BilliardClubManage.BilliardDTO
         private string idkh;
         private string idnv;
 
+        private List<chitiethoadon> dschitiet;
         public Hoadon() { }
 
         public Hoadon(string idhoadon, DateTime ngaylap, int tongtien, bool trangthai, string idkh, string idnv)
@@ -25,6 +26,7 @@ namespace BilliardClubManage.BilliardDTO
             this.trangthai = trangthai;
             this.idkh = idkh;
             this.idnv = idnv;
+            dschitiet = new List<chitiethoadon>();
         }
 
         public string IDhoadon { get => idhoadon; set => idhoadon = value; }
@@ -33,5 +35,6 @@ namespace BilliardClubManage.BilliardDTO
         public bool Trangthai { get => trangthai; set => trangthai = value; }
         public string IDkh { get => idkh; set => idkh = value; }
         public string IDnv { get => idnv; set => idnv = value; }
+        internal List<chitiethoadon> Dschitiet { get => dschitiet; set => dschitiet = value; }
     }
 }

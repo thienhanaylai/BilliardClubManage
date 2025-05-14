@@ -40,8 +40,8 @@
             this.btnXoahh = new Sunny.UI.UISymbolButton();
             this.txtThanhTien = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
-            this.uiSymbolButton3 = new Sunny.UI.UISymbolButton();
+            this.btnChonban = new Sunny.UI.UISymbolButton();
+            this.btnThanhtoan = new Sunny.UI.UISymbolButton();
             this.uiSymbolButton2 = new Sunny.UI.UISymbolButton();
             this.uiLabel5 = new Sunny.UI.UILabel();
             this.uiLabel4 = new Sunny.UI.UILabel();
@@ -70,8 +70,8 @@
             this.uiPanel2.Controls.Add(this.btnXoahh);
             this.uiPanel2.Controls.Add(this.txtThanhTien);
             this.uiPanel2.Controls.Add(this.uiLabel1);
-            this.uiPanel2.Controls.Add(this.uiSymbolButton1);
-            this.uiPanel2.Controls.Add(this.uiSymbolButton3);
+            this.uiPanel2.Controls.Add(this.btnChonban);
+            this.uiPanel2.Controls.Add(this.btnThanhtoan);
             this.uiPanel2.Controls.Add(this.uiSymbolButton2);
             this.uiPanel2.Controls.Add(this.uiLabel5);
             this.uiPanel2.Controls.Add(this.uiLabel4);
@@ -184,41 +184,43 @@
             this.uiLabel1.Text = "Thành tiền:";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // uiSymbolButton1
+            // btnChonban
             // 
-            this.uiSymbolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiSymbolButton1.Location = new System.Drawing.Point(104, 765);
-            this.uiSymbolButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolButton1.Name = "uiSymbolButton1";
-            this.uiSymbolButton1.Radius = 30;
-            this.uiSymbolButton1.Size = new System.Drawing.Size(167, 70);
-            this.uiSymbolButton1.Symbol = 560102;
-            this.uiSymbolButton1.SymbolOffset = new System.Drawing.Point(60, 0);
-            this.uiSymbolButton1.SymbolSize = 48;
-            this.uiSymbolButton1.TabIndex = 8;
-            this.uiSymbolButton1.Text = "Chọn bàn";
-            this.uiSymbolButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiSymbolButton1.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnChonban.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChonban.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChonban.Location = new System.Drawing.Point(104, 765);
+            this.btnChonban.Margin = new System.Windows.Forms.Padding(5);
+            this.btnChonban.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnChonban.Name = "btnChonban";
+            this.btnChonban.Radius = 30;
+            this.btnChonban.Size = new System.Drawing.Size(167, 70);
+            this.btnChonban.Symbol = 560102;
+            this.btnChonban.SymbolOffset = new System.Drawing.Point(60, 0);
+            this.btnChonban.SymbolSize = 48;
+            this.btnChonban.TabIndex = 8;
+            this.btnChonban.Text = "Chọn bàn";
+            this.btnChonban.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChonban.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnChonban.Click += new System.EventHandler(this.btnChonban_Click);
             // 
-            // uiSymbolButton3
+            // btnThanhtoan
             // 
-            this.uiSymbolButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiSymbolButton3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiSymbolButton3.Location = new System.Drawing.Point(281, 765);
-            this.uiSymbolButton3.Margin = new System.Windows.Forms.Padding(5);
-            this.uiSymbolButton3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiSymbolButton3.Name = "uiSymbolButton3";
-            this.uiSymbolButton3.Radius = 30;
-            this.uiSymbolButton3.Size = new System.Drawing.Size(180, 70);
-            this.uiSymbolButton3.Symbol = 61537;
-            this.uiSymbolButton3.SymbolOffset = new System.Drawing.Point(70, 0);
-            this.uiSymbolButton3.SymbolSize = 48;
-            this.uiSymbolButton3.TabIndex = 7;
-            this.uiSymbolButton3.Text = "Thanh toán";
-            this.uiSymbolButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiSymbolButton3.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnThanhtoan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThanhtoan.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhtoan.Location = new System.Drawing.Point(281, 765);
+            this.btnThanhtoan.Margin = new System.Windows.Forms.Padding(5);
+            this.btnThanhtoan.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btnThanhtoan.Name = "btnThanhtoan";
+            this.btnThanhtoan.Radius = 30;
+            this.btnThanhtoan.Size = new System.Drawing.Size(180, 70);
+            this.btnThanhtoan.Symbol = 61537;
+            this.btnThanhtoan.SymbolOffset = new System.Drawing.Point(70, 0);
+            this.btnThanhtoan.SymbolSize = 48;
+            this.btnThanhtoan.TabIndex = 7;
+            this.btnThanhtoan.Text = "Thanh toán";
+            this.btnThanhtoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThanhtoan.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnThanhtoan.Click += new System.EventHandler(this.btnThanhtoan_Click);
             // 
             // uiSymbolButton2
             // 
@@ -463,8 +465,8 @@
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UILine uiLine1;
         private Sunny.UI.UISymbolButton uiSymbolButton2;
-        private Sunny.UI.UISymbolButton uiSymbolButton3;
-        private Sunny.UI.UISymbolButton uiSymbolButton1;
+        private Sunny.UI.UISymbolButton btnThanhtoan;
+        private Sunny.UI.UISymbolButton btnChonban;
         private Sunny.UI.UIPanel ListOder;
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UILabel txtThanhTien;

@@ -19,13 +19,17 @@ namespace BilliardClubManage
             InitializeComponent();
             nhanvien =  nv;
         }
+
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         private Form crtFormChild;
-           
+
+        public static Nhanvien Nhanvien { get => nhanvien; set => nhanvien = value; }
+
         private void OpenFormChild(Form formChild)
         {
             if (crtFormChild != null)

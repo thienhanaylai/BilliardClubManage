@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BilliardClubManage.BilliardDAO;
 using BilliardClubManage.BilliardDTO;
 using Sunny.UI;
 
@@ -18,10 +19,10 @@ namespace BilliardClubManage
         public frmOder()
         {
             InitializeComponent();
-           
+
         }
 
-        
+
         private Form crtFormChild;
         private void OpenFormChild(Form formChild)
         {
@@ -45,7 +46,7 @@ namespace BilliardClubManage
         {
             UIFlowLayoutPanel flw = new UIFlowLayoutPanel();
             flw.Size = new Size(800, 840);
-            flw.Margin = new Padding(4,5,4,5);
+            flw.Margin = new Padding(4, 5, 4, 5);
             flw.Padding = new Padding(2);
             flw.TextAlignment = ContentAlignment.MiddleCenter;
             flw.Location = new Point(0, 0);
@@ -168,7 +169,7 @@ namespace BilliardClubManage
             if (existingItem != null)
             {
                 existingItem.Soluong++;
-                
+
             }
             else
             {
@@ -188,7 +189,7 @@ namespace BilliardClubManage
         private int tongTien(List<Hanghoa> ds)
         {
             int tongTien = 0;
-            foreach(Hanghoa n in ds)
+            foreach (Hanghoa n in ds)
             {
                 tongTien += n.Gia * (int)n.Soluong;
             }
@@ -196,11 +197,11 @@ namespace BilliardClubManage
         }
         private void LoadData()
 
-        {   dgvOder.AutoGenerateColumns = false;
-           
+        { dgvOder.AutoGenerateColumns = false;
+
             dgvOder.DataSource = null;
             dgvOder.DataSource = orderItems;
-            
+
             txtThanhTien.Text = tongTien(orderItems).ToString("#,##0") + " VND";
         }
 
@@ -254,7 +255,7 @@ namespace BilliardClubManage
                 {
                     existingItem.Soluong--;
                 }
-                if(existingItem.Soluong <= 0) 
+                if (existingItem.Soluong <= 0)
                 {
                     orderItems.Remove(existingItem);
                 }
@@ -271,5 +272,35 @@ namespace BilliardClubManage
             orderItems.Clear();
             LoadData();
         }
+        Hoadon hd = new Hoadon();
+    private void btnThanhtoan_Click(object sender, EventArgs e)
+    {
+            hd.IDhoadon = "HD" + new unity().getIDhd();
+            hd.Dschitiet = new List<chitiethoadon>();
+            foreach (Hanghoa n in orderItems)
+            {
+                chitiethoadon temp = new chitiethoadon();
+                temp.Idchitiethoadon = "CT" + new unity().getIDhdct();
+                temp.Idban = "";
+                temp.Sogiochoi = 0;
+                temp.Idhanghoa = n.IDhanghoa;
+                temp.Soluong = (int)n.Soluong;
+                temp.Idban = "";
+                temp.Sogiochoi = 0;
+                temp.Idhoadon = hd.IDhoadon;
+                hd.Dschitiet.Add(temp);
+            }
+             frmBill bill = new frmBill(null, orderItems,hd);
+           bill.Show();
+       
     }
+
+        private void btnChonban_Click(object sender, EventArgs e)
+        {
+            List<Ban> lista = BilliardClubBUS.BanBUS.getListBan();
+            frmListBan listall = new frmListBan(lista, 1);
+            listall.ShowDialog();
+        }
+    }
+
 }

@@ -76,8 +76,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BilliardBUS\BanBUS.cs" />
+    <Compile Include="BilliardBUS\chitiethoadonBUS.cs" />
     <Compile Include="BilliardBUS\DoanhthuBUS.cs" />
     <Compile Include="BilliardBUS\HanghoaBUS.cs" />
+    <Compile Include="BilliardBUS\HoadonBUS.cs" />
     <Compile Include="BilliardBUS\KhachhangBUS.cs" />
     <Compile Include="BilliardBUS\KhoBUS.cs" />
     <Compile Include="BilliardBUS\NhanvienBUS.cs" />
@@ -87,18 +89,22 @@
       <DependentUpon>BilliardClubDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="BilliardDAO\BanDAO.cs" />
+    <Compile Include="BilliardDAO\chitiethoadonDAO.cs" />
     <Compile Include="BilliardDAO\DataProvider.cs" />
     <Compile Include="BilliardDAO\HanghoaDAO.cs" />
+    <Compile Include="BilliardDAO\HoadonDAO.cs" />
     <Compile Include="BilliardDAO\KhachhangDAO.cs" />
     <Compile Include="BilliardDAO\KhoDAO.cs" />
     <Compile Include="BilliardDAO\NhanvienDAO.cs" />
     <Compile Include="BilliardDAO\unity.cs" />
     <Compile Include="BilliardDTO\Ban.cs" />
+    <Compile Include="BilliardDTO\chitiethoadon.cs" />
     <Compile Include="BilliardDTO\Hanghoa.cs" />
     <Compile Include="BilliardDTO\Hoadon.cs" />
     <Compile Include="BilliardDTO\Khachhang.cs" />
     <Compile Include="BilliardDTO\Kho.cs" />
     <Compile Include="BilliardDTO\Nhanvien.cs" />
+    <Compile Include="BilliardDTO\NhanvienDangDangnhap.cs" />
     <Compile Include="frmBill.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -18,12 +18,12 @@ namespace BilliardClubManage
     {
 
         private List<Ban> ds;
-        int khuvuc;
-        public frmListBan(List<Ban> ds, int khuvuc)
+        int mode;
+        public frmListBan(List<Ban> ds, int mode)
         {
             InitializeComponent();
             this.ds = ds;
-            this.khuvuc = khuvuc;
+            this.mode = mode;
         }
 
 
@@ -95,10 +95,11 @@ namespace BilliardClubManage
         {
             int x=0, y=0;
             List<Ban> list = fillterList(this.ds);
-            foreach(Ban n in list)
-            {
-               this.uiFlowLayoutPanel1.Controls.Add(createCard(n, x + 10, y + 10));
-            }
+                foreach (Ban n in list)
+                {
+                    this.uiFlowLayoutPanel1.Controls.Add(createCard(n, x + 10, y + 10));
+                }
+
         }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BilliardClubManage.BilliardBUS;
+using BilliardClubManage.BilliardDAO;
 using BilliardClubManage.BilliardDTO;
 using Sunny.UI;
 
@@ -16,11 +18,13 @@ namespace BilliardClubManage
     {
         Ban ban;
         List<Hanghoa> dshh;
-        public frmBill(Ban ban,List<Hanghoa> ds)
+        Hoadon hd;
+        public frmBill(Ban ban,List<Hanghoa> ds, Hoadon hd)
         {
             InitializeComponent();
             this.ban = ban;
             this.dshh = ds;
+            this.hd = hd;
         }
 
 
@@ -28,7 +32,7 @@ namespace BilliardClubManage
         {
             UILabel ten = new UILabel();
             ten.Font = new Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ten.Location = new Point(60, 50+y);
+            ten.Location = new Point(60, y);
             ten.BackColor = Color.Transparent;
             ten.AutoSize = true;
             ten.TextAlign = ContentAlignment.MiddleCenter;
@@ -36,7 +40,7 @@ namespace BilliardClubManage
 
             UILabel sl = new UILabel();
             sl.Font = new Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sl.Location = new Point(377, 50 + y);
+            sl.Location = new Point(377, y);
             sl.AutoSize = true;
             sl.BackColor = Color.Transparent;
             sl.TextAlign = ContentAlignment.MiddleCenter;
@@ -44,7 +48,7 @@ namespace BilliardClubManage
 
             UILabel gia = new UILabel();
             gia.Font = new Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            gia.Location = new Point(560, 50 + y);
+            gia.Location = new Point(560, y);
             gia.AutoSize = true;
             gia.BackColor = Color.Transparent;
             gia.TextAlign = ContentAlignment.MiddleCenter;
@@ -60,7 +64,7 @@ namespace BilliardClubManage
         {
             UILabel ten = new UILabel();
             ten.Font = new Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ten.Location = new Point(60, 50 + y);
+            ten.Location = new Point(60, y);
             ten.AutoSize = true;
             ten.BackColor = Color.Transparent;
             ten.TextAlign = ContentAlignment.MiddleCenter;
@@ -68,7 +72,7 @@ namespace BilliardClubManage
 
             UILabel sl = new UILabel();
             sl.Font = new Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            sl.Location = new Point(377, 50 + y);
+            sl.Location = new Point(377, y);
             sl.AutoSize = true;
             sl.BackColor = Color.Transparent;
             sl.TextAlign = ContentAlignment.MiddleCenter;
@@ -79,7 +83,7 @@ namespace BilliardClubManage
 
             UILabel gia = new UILabel();
             gia.Font = new Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            gia.Location = new Point(560, 50 + y);
+            gia.Location = new Point(560, y);
             gia.AutoSize = true;
             gia.BackColor = Color.Transparent;
             gia.TextAlign = ContentAlignment.MiddleCenter;
@@ -102,19 +106,37 @@ namespace BilliardClubManage
 
         private void frmBill_Load(object sender, EventArgs e)
         {
-            int y = 0;
+            int y = 50;
             int tongtien = 0;
             foreach(Hanghoa n in dshh)
             {
-                creInfohh(n, 10);
+                creInfohh(n, y+=30);
                 tongtien += (int)n.Soluong * n.Gia;
             }
-            creInfoban(ban, 10);
+            if(ban != null)
+            {
+            creInfoban(ban, y += 30);
             TimeSpan time = (DateTime)ban.GioKT - (DateTime)ban.GioBD;
             int sogiochoi = 0;
              sogiochoi = (int)time.TotalHours;
             tongtien += sogiochoi * ban.Dongia;
+            }
+            
             txtThanhTien.Text = tongtien.ToString("#,##0")+ " VND";
+        }
+
+        private void btnXacnhan_Click(object sender, EventArgs e)
+        {   
+            hd.Tongtien = Convert.ToInt32(txtThanhTien.Text.Replace(" VND", "").Replace(",", ""));
+            hd.Ngaylap = DateTime.Now;
+            hd.Trangthai = true;
+            hd.IDkh = "";
+            hd.IDnv = frmMain.Nhanvien.IDnv;
+            //thieeus ham cap nhat chi tiet hoa don cho tung san pham torng hoa don
+            if (HoadonBUS.insertHoaDon(hd))
+            {
+                MessageBox.Show("Thanh toan thanh cong !");
+            } 
         }
     }
 }

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.dsOder = new Sunny.UI.UIPanel();
+            this.uiLabel5 = new Sunny.UI.UILabel();
+            this.uiLabel4 = new Sunny.UI.UILabel();
+            this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.btnXacnhan = new Sunny.UI.UIButton();
             this.uiButton1 = new Sunny.UI.UIButton();
             this.txtThanhTien = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
-            this.uiLabel3 = new Sunny.UI.UILabel();
-            this.uiLabel4 = new Sunny.UI.UILabel();
-            this.uiLabel5 = new Sunny.UI.UILabel();
             this.dsOder.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,49 @@
             this.dsOder.TabIndex = 12;
             this.dsOder.Text = null;
             this.dsOder.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiLabel5
+            // 
+            this.uiLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiLabel5.AutoSize = true;
+            this.uiLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.uiLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.uiLabel5.Location = new System.Drawing.Point(572, 13);
+            this.uiLabel5.Name = "uiLabel5";
+            this.uiLabel5.Size = new System.Drawing.Size(41, 24);
+            this.uiLabel5.TabIndex = 23;
+            this.uiLabel5.Text = "Giá";
+            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uiLabel4
+            // 
+            this.uiLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiLabel4.AutoSize = true;
+            this.uiLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.uiLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.uiLabel4.Location = new System.Drawing.Point(349, 13);
+            this.uiLabel4.Name = "uiLabel4";
+            this.uiLabel4.Size = new System.Drawing.Size(94, 24);
+            this.uiLabel4.TabIndex = 22;
+            this.uiLabel4.Text = "Số lượng";
+            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.uiLabel4.Click += new System.EventHandler(this.uiLabel4_Click);
+            // 
+            // uiLabel3
+            // 
+            this.uiLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiLabel3.AutoSize = true;
+            this.uiLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.uiLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.uiLabel3.Location = new System.Drawing.Point(63, 13);
+            this.uiLabel3.Name = "uiLabel3";
+            this.uiLabel3.Size = new System.Drawing.Size(144, 24);
+            this.uiLabel3.TabIndex = 21;
+            this.uiLabel3.Text = "Tên sản phẩm";
+            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // uiLabel1
             // 
@@ -82,6 +125,7 @@
             this.btnXacnhan.TabIndex = 17;
             this.btnXacnhan.Text = "Xác nhận";
             this.btnXacnhan.TipsFont = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
             // uiButton1
             // 
@@ -121,49 +165,6 @@
             this.uiLabel2.TabIndex = 19;
             this.uiLabel2.Text = "Thành tiền:";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiLabel3
-            // 
-            this.uiLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.uiLabel3.AutoSize = true;
-            this.uiLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.uiLabel3.Location = new System.Drawing.Point(63, 13);
-            this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(144, 24);
-            this.uiLabel3.TabIndex = 21;
-            this.uiLabel3.Text = "Tên sản phẩm";
-            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uiLabel4
-            // 
-            this.uiLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.uiLabel4.AutoSize = true;
-            this.uiLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.uiLabel4.Location = new System.Drawing.Point(349, 13);
-            this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(94, 24);
-            this.uiLabel4.TabIndex = 22;
-            this.uiLabel4.Text = "Số lượng";
-            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.uiLabel4.Click += new System.EventHandler(this.uiLabel4_Click);
-            // 
-            // uiLabel5
-            // 
-            this.uiLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.uiLabel5.AutoSize = true;
-            this.uiLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.uiLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uiLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.uiLabel5.Location = new System.Drawing.Point(572, 13);
-            this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(41, 24);
-            this.uiLabel5.TabIndex = 23;
-            this.uiLabel5.Text = "Giá";
-            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmBill
             // 
