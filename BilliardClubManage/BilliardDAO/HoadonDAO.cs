@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using BilliardClubManage.BilliardDTO;
 
 namespace BilliardClubManage.BilliardDAO
@@ -66,20 +67,22 @@ namespace BilliardClubManage.BilliardDAO
             else tranthai = 1;
             string sql = "insert into hoadon values(N'" + hd.IDhoadon + "', '" + timefortmat + "', " + hd.Tongtien + ", " + tranthai + ", N'" + hd.IDkh + "', N'" + hd.IDnv + "')";
             int result = DataProvider.ExecuteNonQuery(sql);
-            if (result == 0)
+            if (result > 0)
             {
                 DataProvider.Close();
-                return false;
+                return true;
             }
             else
             {
                 DataProvider.Close();
-                return true;
+                return false;
             }
         }
 
         public bool updateHoadon(Hoadon hd)
         {
+            try
+            {
             DataProvider.Connect();
             string timefortmat = ((DateTime)hd.Ngaylap).ToString("yyyy-MM-dd HH:mm:ss");
             int tranthai = 0;
@@ -96,6 +99,10 @@ namespace BilliardClubManage.BilliardDAO
             {
                 DataProvider.Close();
                 return true;
+            }
+            } catch(Exception ex)
+            {
+                return false;
             }
         }
 
@@ -114,7 +121,24 @@ namespace BilliardClubManage.BilliardDAO
                 return true;
             }
         }
-        
 
+        public Hoadon getHoadonByIdban(string id)
+        {
+            Hoadon hd = new Hoadon();
+            DataProvider.Connect();
+            string sql = "select * from Hoadon where IDhoadon in (select IDhoadon from chitiethoadon where IDban = N'" + id + "') and Trangthai = 0";
+            SqlDataReader rd = DataProvider.SqlDataReader(sql);
+            if (rd.Read())
+            {
+                hd.IDhoadon = rd.GetString(0);
+                hd.Ngaylap = rd.GetDateTime(1);
+                hd.Tongtien = rd.GetInt32(2);
+                hd.Trangthai = rd.GetBoolean(3);
+                hd.IDkh = rd.GetString(4);
+                hd.IDnv = rd.GetString(5);
+            }
+            DataProvider.Close();
+            return hd;
+        }
      }
 }

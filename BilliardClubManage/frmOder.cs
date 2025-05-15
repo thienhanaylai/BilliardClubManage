@@ -285,12 +285,10 @@ namespace BilliardClubManage
                 temp.Sogiochoi = 0;
                 temp.Idhanghoa = n.IDhanghoa;
                 temp.Soluong = (int)n.Soluong;
-                temp.Idban = "";
-                temp.Sogiochoi = 0;
                 temp.Idhoadon = hd.IDhoadon;
                 hd.Dschitiet.Add(temp);
             }
-             frmBill bill = new frmBill(null, orderItems,hd);
+             frmBill bill = new frmBill(null, orderItems,hd, 0);
            bill.Show();
        
     }
@@ -298,7 +296,8 @@ namespace BilliardClubManage
         private void btnChonban_Click(object sender, EventArgs e)
         {
             List<Ban> lista = BilliardClubBUS.BanBUS.getListBan();
-            frmListBan listall = new frmListBan(lista, 1);
+            
+            frmListBan listall = new frmListBan(lista,orderItems, 1);
             listall.ShowDialog();
         }
     }

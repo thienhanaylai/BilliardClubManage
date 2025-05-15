@@ -35,5 +35,10 @@ namespace BilliardClubManage.BilliardBUS
         {
             return new HoadonDAO().checkPayment(id); //false la chua thanh toan, true la da thanh toan
         }
+
+        public static Hoadon gethoadonbyIDban(string id)
+        {
+            return new HoadonDAO().getHoadonByIdban(id);
+        }
     }
 }

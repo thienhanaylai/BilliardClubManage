@@ -26,7 +26,7 @@ namespace BilliardClubManage
 
         private void uiPanel1_Load(object sender, EventArgs e)
         {
-            if(ban.Tinhtrang)
+            if (ban.Tinhtrang)
             {
                 imgBan.BackgroundImage = Properties.Resources.ban1;
                 txtTenBan.Text = ban.Tenban;
@@ -69,7 +69,7 @@ namespace BilliardClubManage
                 }
                 btnDongBan.Enabled = false;
                 btnThanhToan.Enabled = true;
-                
+
             }
         }
 
@@ -78,7 +78,7 @@ namespace BilliardClubManage
             this.Close();
         }
 
-        Hoadon hoadon = new Hoadon();
+
         private void btnMoBan_Click(object sender, EventArgs e)
         {
             DateTime gettime = DateTime.Now;
@@ -87,9 +87,9 @@ namespace BilliardClubManage
             ban.GioBD = gettime;
             ban.Tinhtrang = true;
             ban.GioKT = null;
-
-             //khi nhan bat dau tinh gio se t ao 1 bill voi trang thai chua thanh toan false
-            hoadon.IDhoadon =  "HD" + new unity().getIDhd(); 
+            Hoadon hoadon = new Hoadon();
+            //khi nhan bat dau tinh gio se t ao 1 bill voi trang thai chua thanh toan false
+            hoadon.IDhoadon = "HD" + new unity().getIDhd();
             hoadon.Ngaylap = gettime;
             hoadon.Tongtien = 0;
             hoadon.Trangthai = false; //chua thanh toan
@@ -97,12 +97,13 @@ namespace BilliardClubManage
             Nhanvien nv = frmMain.Nhanvien;
             hoadon.IDnv = nv.IDnv;
             hoadon.Dschitiet = new List<chitiethoadon>();
-            chitiethoadon hdban = new chitiethoadon("",hoadon.IDhoadon,"",0,ban.IDban,0);
+            string idcthd = "CT" + new unity().getIDhdct();
+            chitiethoadon hdban = new chitiethoadon(idcthd, hoadon.IDhoadon, "", 0, ban.IDban, 0);
             hoadon.Dschitiet.Add(hdban);
 
             try
             {
-                if (BanBUS.updateGio(ban)&& HoadonBUS.insertHoaDon(hoadon)&& chitiethoadonBUS.insertCTHD(hdban.Idchitiethoadon,hdban.Idhoadon,hdban.Idhanghoa,hdban.Soluong,hdban.Idban,hdban.Sogiochoi))
+                if (BanBUS.updateGio(ban) && HoadonBUS.insertHoaDon(hoadon) && chitiethoadonBUS.insertCTHD(hdban))
                 {
                     btnDongBan.Enabled = true;
                     btnThanhToan.Enabled = true;
@@ -121,7 +122,7 @@ namespace BilliardClubManage
         {
             DateTime gettime = DateTime.Now;
             string giokt = gettime.ToString("yyyy-MM-dd HH:mm:ss");
-            txtGioKT.Text= giokt;
+            txtGioKT.Text = giokt;
             ban.Tinhtrang = false;
             ban.GioKT = gettime;
             int sogiochoi = 0;
@@ -133,20 +134,17 @@ namespace BilliardClubManage
             txtGioChoi.Text = sogiochoi.ToString();
             txtTongTien.Text = (sogiochoi * ban.Dongia).ToString("#,##0") + " VND";
             //update bill
-            hoadon.Tongtien = int.Parse(txtTongTien.Text);
-            hoadon.Trangthai = false; 
-            
-            chitiethoadon tmep = hoadon.Dschitiet.FirstOrDefault(idban => ban.IDban == idban.Idban);
+            Hoadon hd = new Hoadon();
+            hd = HoadonBUS.gethoadonbyIDban(ban.IDban);
+            hd.Tongtien = sogiochoi * ban.Dongia;
+            hd.Trangthai = false;
+            hd.Dschitiet = chitiethoadonBUS.getDsSanphamByIDHoadon(hd.IDhoadon);
+            chitiethoadon tmep = hd.Dschitiet.FirstOrDefault(idban => ban.IDban == idban.Idban);
             if (tmep != null)
             {
                 tmep.Sogiochoi = sogiochoi;
             }
-            else
-            {
-                chitiethoadon hdban = new chitiethoadon("", hoadon.IDhoadon, "", 0, ban.IDban, sogiochoi);
-                hoadon.Dschitiet.Add(hdban);
-            }
-            if (BanBUS.updateGio(ban)&&chitiethoadonBUS.updateCTHD(tmep))
+            if (BanBUS.updateGio(ban) && chitiethoadonBUS.updateCTHD(tmep))
             {
                 btnDongBan.Enabled = false;
                 btnThanhToan.Enabled = true;
@@ -155,11 +153,43 @@ namespace BilliardClubManage
 
         }
 
+        private void resetBan()
+        {
+            ban.Tinhtrang= false;
+            ban.GioBD = null;
+            ban.GioKT = null;
+            txtGioBD.Text = "";
+            txtGioKT.Text = "";
+            txtGioChoi.Text = "";
+            txtTongTien.Text = "";
+            btnDongBan.Enabled = false;
+            btnThanhToan.Enabled = false;
+            btnMoBan.Enabled = true;
+            BanBUS.updateBan(ban);
+
+        }
+
+        private Hanghoa convertCTHDtoHangHoa(chitiethoadon cthd)
+        {
+            Hanghoa temp = HanghoaBUS.getHHbyId(cthd.Idhanghoa);
+            temp.Soluong = cthd.Soluong;
+            temp.IDhanghoa = cthd.Idhanghoa;
+            return temp;
+        }
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             List<Hanghoa> dshh = new List<Hanghoa>();
-            frmBill thanhtoan = new frmBill(ban,dshh,hoadon);
+            Hoadon hoadon = new Hoadon();
+            hoadon = HoadonBUS.gethoadonbyIDban(ban.IDban);
+            hoadon.Dschitiet = chitiethoadonBUS.getDsSanphamByIDHoadon(hoadon.IDhoadon);
+            foreach (chitiethoadon n in hoadon.Dschitiet) {
+                Hanghoa hanghoa = new Hanghoa();
+                hanghoa = convertCTHDtoHangHoa(n);
+                dshh.Add(hanghoa);
+            }
+            frmBill thanhtoan = new frmBill(ban, dshh, hoadon,1);
             thanhtoan.Show();
+            resetBan();
         }
     }
 }

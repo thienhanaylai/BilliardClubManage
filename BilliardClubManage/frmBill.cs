@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BilliardClubBUS;
 using BilliardClubManage.BilliardBUS;
 using BilliardClubManage.BilliardDAO;
 using BilliardClubManage.BilliardDTO;
@@ -19,12 +20,15 @@ namespace BilliardClubManage
         Ban ban;
         List<Hanghoa> dshh;
         Hoadon hd;
-        public frmBill(Ban ban,List<Hanghoa> ds, Hoadon hd)
+        int mode; //0 la hanh toan tu order 1 la thanh toan từ list ban
+
+        public frmBill(Ban ban,List<Hanghoa> ds, Hoadon hd, int mode)
         {
             InitializeComponent();
             this.ban = ban;
             this.dshh = ds;
             this.hd = hd;
+            this.mode = mode;
         }
 
 
@@ -104,10 +108,11 @@ namespace BilliardClubManage
             this.Close();
         }
 
+            int tongtien = 0;
         private void frmBill_Load(object sender, EventArgs e)
         {
             int y = 50;
-            int tongtien = 0;
+            
             foreach(Hanghoa n in dshh)
             {
                 creInfohh(n, y+=30);
@@ -127,16 +132,28 @@ namespace BilliardClubManage
 
         private void btnXacnhan_Click(object sender, EventArgs e)
         {   
-            hd.Tongtien = Convert.ToInt32(txtThanhTien.Text.Replace(" VND", "").Replace(",", ""));
+            hd.Tongtien = tongtien;
             hd.Ngaylap = DateTime.Now;
             hd.Trangthai = true;
             hd.IDkh = "";
             hd.IDnv = frmMain.Nhanvien.IDnv;
             //thieeus ham cap nhat chi tiet hoa don cho tung san pham torng hoa don
-            if (HoadonBUS.insertHoaDon(hd))
+            int flag = 0;
+            if (mode == 0) {
+                if (HoadonBUS.insertHoaDon(hd)) flag = 1;
+            } else if(mode == 1)
             {
+                if(HoadonBUS.updateHoadon(hd)) flag =1;
+            }
+            if (flag == 1)
+            {
+                foreach (chitiethoadon n in hd.Dschitiet)
+                {
+                    chitiethoadonBUS.insertCTHD(n);
+                }
                 MessageBox.Show("Thanh toan thanh cong !");
-            } 
+                this.Close();
+            }
         }
     }
 }

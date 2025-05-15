@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using BilliardClubManage.BilliardBUS;
+using BilliardClubManage.BilliardDAO;
 using BilliardClubManage.BilliardDTO;
 using BilliardClubManage.Properties;
 using Sunny.UI;
@@ -19,11 +21,13 @@ namespace BilliardClubManage
 
         private List<Ban> ds;
         int mode;
-        public frmListBan(List<Ban> ds, int mode)
+        List<Hanghoa> dshh;
+        public frmListBan(List<Ban> ds,List<Hanghoa> dshh, int mode)
         {
             InitializeComponent();
             this.ds = ds;
             this.mode = mode;
+            this.dshh = dshh;
         }
 
 
@@ -58,9 +62,18 @@ namespace BilliardClubManage
 
             card.Controls.Add(img);
             card.Controls.Add(ten);
+            if(mode == 0)
+            {
             card.Click += (s, e) => openBan(ban);
             img.Click += (s, e) => openBan(ban);
             ten.Click += (s, e) => openBan(ban);
+            } else if(mode ==1)
+            {
+                card.Click += (s, e) => themvaobill(ban,dshh);
+                img.Click += (s, e) => themvaobill(ban, dshh);
+                ten.Click += (s, e) => themvaobill(ban, dshh);
+            }
+
             return card;
         }
         //ham filter sap xep danh sach ban theo trnag thai ban trong va ban dang su dung
@@ -89,6 +102,20 @@ namespace BilliardClubManage
         {
             frmTinhgio f = new frmTinhgio(ban);
             f.Show();
+        }
+
+        private void themvaobill(Ban ban,List<Hanghoa> dshh)
+        {
+            foreach(Hanghoa h in dshh)
+            {
+                chitiethoadon chitiethoadon= new chitiethoadon();
+                chitiethoadon.Idhanghoa = h.IDhanghoa;
+                chitiethoadon.Soluong = (int)h.Soluong;
+                chitiethoadon.Idhoadon = HoadonBUS.gethoadonbyIDban(ban.IDban).IDhoadon;
+                chitiethoadon.Idchitiethoadon = "CT" + new unity().getIDhdct();
+                chitiethoadonBUS.insertCTHD(chitiethoadon);
+            }
+            this.Close();
         }
 
         private void uiFlowLayoutPanel1_Load(object sender, EventArgs e)

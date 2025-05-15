@@ -9,9 +9,9 @@ namespace BilliardClubManage.BilliardBUS
 {
     internal class chitiethoadonBUS
     {
-        public static bool insertCTHD(string id,string idhoadon, string idhanghoa, int soluong, string idban, int sogiochoi)
+        public static bool insertCTHD(chitiethoadon n)
         {
-            return new BilliardDAO.chitiethoadonDAO().insertChitiethoadon(id, idhoadon, idhanghoa, soluong, idban, sogiochoi);
+            return new BilliardDAO.chitiethoadonDAO().insertChitiethoadon(n);
         }
 
         public static List<chitiethoadon> getDsSanphamByIDHoadon(string id)
