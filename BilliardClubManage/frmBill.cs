@@ -115,8 +115,11 @@ namespace BilliardClubManage
             
             foreach(Hanghoa n in dshh)
             {
+                if (n.Soluong > 0)
+                {
                 creInfohh(n, y+=30);
                 tongtien += (int)n.Soluong * n.Gia;
+                }
             }
             if(ban != null)
             {

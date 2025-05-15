@@ -70,7 +70,7 @@ namespace BilliardClubManage.BilliardDAO
             if (result > 0)
             {
                 DataProvider.Close();
-                return true;
+                return true;    
             }
             else
             {
