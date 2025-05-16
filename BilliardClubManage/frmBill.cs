@@ -141,13 +141,33 @@ namespace BilliardClubManage
             hd.IDkh = "";
             hd.IDnv = frmMain.Nhanvien.IDnv;
             //thieeus ham cap nhat chi tiet hoa don cho tung san pham torng hoa don
+
             int flag = 0;
-            if (mode == 0) {
-                if (HoadonBUS.insertHoaDon(hd)) flag = 1;
-            } else if(mode == 1)
+
+            foreach (Hanghoa n in dshh)
             {
-                if(HoadonBUS.updateHoadon(hd)) flag =1;
+                int hangtokho = KhoBUS.getSoLuong(n.IDhanghoa);
+                if (n.Soluong > hangtokho)
+                {
+                    MessageBox.Show(n.Tenhanghoa + " Đã hết hàng !");
+                    flag = 0;
+                    this.Close();
+                } else
+                {
+                    int soluong = hangtokho - (int)n.Soluong;
+                    KhoBUS.updateSoluong(n.IDhanghoa, soluong);
+
+                    if (mode == 0)
+                    {
+                        if (HoadonBUS.insertHoaDon(hd)) flag = 1;
+                    }
+                    else if (mode == 1)
+                    {
+                        if (HoadonBUS.updateHoadon(hd)) flag = 1;
+                    }
+                }
             }
+
             if (flag == 1)
             {
                 foreach (chitiethoadon n in hd.Dschitiet)

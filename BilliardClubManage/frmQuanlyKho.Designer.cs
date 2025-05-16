@@ -83,7 +83,6 @@
             this.dgvKho.Location = new System.Drawing.Point(12, 82);
             this.dgvKho.Name = "dgvKho";
             this.dgvKho.ReadOnly = true;
-            this.dgvKho.RowTemplate.Height = 35;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -97,6 +96,7 @@
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dgvKho.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvKho.RowTemplate.Height = 35;
             this.dgvKho.SelectedIndex = -1;
             this.dgvKho.ShowCellErrors = false;
             this.dgvKho.ShowCellToolTips = false;
@@ -105,6 +105,7 @@
             this.dgvKho.Size = new System.Drawing.Size(1368, 684);
             this.dgvKho.StripeOddColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
             this.dgvKho.TabIndex = 0;
+            this.dgvKho.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvKho_CellFormatting);
             // 
             // clmID
             // 

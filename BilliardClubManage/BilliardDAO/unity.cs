@@ -45,7 +45,7 @@ namespace BilliardClubManage.BilliardDAO
             return id;
         }
 
-        public string getIDhdct() //id hang hoa
+        public string getIDhdct() //id hoa don chi tiet
         {
             DataProvider.Connect();
             string sql = "select next value for SeqChiTietHoaDonId;";

@@ -61,8 +61,22 @@ namespace BilliardClubManage
                 if (e.Value != null)
                 {
                     bool tinhtrang = Convert.ToBoolean(e.Value); // Chuyển đổi giá trị từ DB
-                    e.Value = tinhtrang ? "Dang su dung" : "Trong"; // Nếu true → Nữ, false → Nam
+                    e.Value = tinhtrang ? "Đang sử dụng" : "Trống"; // Nếu true → Nữ, false → Nam
                     e.FormattingApplied = true; // Đánh dấu đã áp dụng format
+                }
+            }
+
+            if(dgvBan.Columns[e.ColumnIndex].Name == "dongia")
+            {
+                if (e.Value != null)
+                {
+                    string valueAsString = e.Value.ToString(); // Lấy giá trị dưới dạng chuỗi
+                    if (decimal.TryParse(valueAsString, out decimal numericValue))
+                    {
+                        // Định dạng giá trị số và thêm " VND"
+                        e.Value = numericValue.ToString("#,##0") + " VND";
+                        e.FormattingApplied = true;
+                    }
                 }
             }
         }

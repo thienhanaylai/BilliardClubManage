@@ -300,6 +300,11 @@ namespace BilliardClubManage
             frmListBan listall = new frmListBan(lista,orderItems, 1);
             listall.ShowDialog();
         }
+
+        private void txtsl_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

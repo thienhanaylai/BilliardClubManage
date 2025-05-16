@@ -18,10 +18,12 @@ namespace BilliardClubManage
     {
 
         Ban ban;
-        public frmTinhgio(Ban ban)
+        private Action onDataUpdated;
+        public frmTinhgio(Ban ban, Action onDataUpdated)
         {
             InitializeComponent();
             this.ban = ban;
+            this.onDataUpdated = onDataUpdated;
         }
 
         private void uiPanel1_Load(object sender, EventArgs e)
@@ -36,6 +38,7 @@ namespace BilliardClubManage
                 txtGioBD.Text = ((DateTime)ban.GioBD).ToString("yyyy-MM-dd HH:mm:ss");
                 txtGioKT.Text = "";
                 btnMoBan.Enabled = false;
+                btnThanhToan.Enabled = false;
             }
             else
             {
@@ -68,7 +71,14 @@ namespace BilliardClubManage
                     txtTongTien.Text = (sogiochoi * ban.Dongia).ToString("#,##0") + " VND";
                 }
                 btnDongBan.Enabled = false;
-                btnThanhToan.Enabled = true;
+                if (txtGioKT.Text  != "")
+                {
+                    btnThanhToan.Enabled = true;
+                } else
+                {
+                    btnThanhToan.Enabled = false;
+                }
+                
 
             }
         }
@@ -76,6 +86,7 @@ namespace BilliardClubManage
         private void uiSymbolButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+            onDataUpdated?.Invoke();
         }
 
 
@@ -106,7 +117,6 @@ namespace BilliardClubManage
                 if (BanBUS.updateGio(ban) && HoadonBUS.insertHoaDon(hoadon) && chitiethoadonBUS.insertCTHD(hdban))
                 {
                     btnDongBan.Enabled = true;
-                    btnThanhToan.Enabled = true;
                     btnMoBan.Enabled = false;
                 }
             }

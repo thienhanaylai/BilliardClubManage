@@ -56,6 +56,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmListBan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListBan";
             this.ResumeLayout(false);
 

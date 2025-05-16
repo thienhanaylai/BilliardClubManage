@@ -106,6 +106,7 @@
             this.txtsl.TabIndex = 14;
             this.txtsl.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.txtsl.Watermark = "Số lượng tăng, giảm";
+            this.txtsl.TextChanged += new System.EventHandler(this.txtsl_TextChanged);
             // 
             // btnGiamsl
             // 

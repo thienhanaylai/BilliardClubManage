@@ -22,7 +22,7 @@ namespace BilliardClubManage
         private List<Ban> ds;
         int mode;
         List<Hanghoa> dshh;
-        public frmListBan(List<Ban> ds,List<Hanghoa> dshh, int mode)
+        public frmListBan(List<Ban> ds, List<Hanghoa> dshh, int mode)
         {
             InitializeComponent();
             this.ds = ds;
@@ -31,7 +31,7 @@ namespace BilliardClubManage
         }
 
 
-        private UIPanel createCard(Ban ban,int x,int y)
+        private UIPanel createCard(Ban ban, int x, int y)
         {
             UIPanel card = new UIPanel();
             card.Size = new Size(180, 240);
@@ -39,7 +39,7 @@ namespace BilliardClubManage
             card.TextAlignment = ContentAlignment.MiddleCenter;
             card.Margin = new Padding(10);
             card.FillColor = Color.FromArgb(255, 255, 255);
-            card.Location = new Point(x,y);
+            card.Location = new Point(x, y);
 
             UIPanel img = new UIPanel();
             img.Size = new Size(160, 172);
@@ -54,7 +54,7 @@ namespace BilliardClubManage
             img.TextAlignment = ContentAlignment.MiddleCenter;
 
             UILabel ten = new UILabel();
-            ten.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point,((byte)(0)));
+            ten.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
             ten.BackColor = Color.Transparent;
             ten.Location = new Point(6, 192);
             ten.Size = new Size(104, 23);
@@ -62,20 +62,22 @@ namespace BilliardClubManage
 
             card.Controls.Add(img);
             card.Controls.Add(ten);
-            if(mode == 0)
+            if (mode == 0)
             {
-            card.Click += (s, e) => openBan(ban);
-            img.Click += (s, e) => openBan(ban);
-            ten.Click += (s, e) => openBan(ban);
-            } else if(mode ==1)
+                card.Click += (s, e) => openBan(ban);
+                img.Click += (s, e) => openBan(ban);
+                ten.Click += (s, e) => openBan(ban);
+            } else if (mode == 1)
             {
-                card.Click += (s, e) => themvaobill(ban,dshh);
+                card.Click += (s, e) => themvaobill(ban, dshh);
                 img.Click += (s, e) => themvaobill(ban, dshh);
                 ten.Click += (s, e) => themvaobill(ban, dshh);
             }
 
             return card;
         }
+
+
         //ham filter sap xep danh sach ban theo trnag thai ban trong va ban dang su dung
         public List<Ban> fillterList(List<Ban> ds)
         {
@@ -98,9 +100,23 @@ namespace BilliardClubManage
 
         }
 
+        private void reload()
+        {
+            int x = 0, y = 0;
+            List<Ban> list = fillterList(this.ds);
+            this.uiFlowLayoutPanel1.Clear();
+            if (mode == 0)
+            {
+                foreach (Ban n in list)
+                {
+                    this.uiFlowLayoutPanel1.Controls.Add(createCard(n, x + 10, y + 10));
+                }
+
+            }
+        }
         private void openBan(Ban ban)
         {
-            frmTinhgio f = new frmTinhgio(ban);
+            frmTinhgio f = new frmTinhgio(ban,reload);
             f.Show();
         }
 
@@ -120,12 +136,33 @@ namespace BilliardClubManage
 
         private void uiFlowLayoutPanel1_Load(object sender, EventArgs e)
         {
-            int x=0, y=0;
+            int x = 0, y = 0;
             List<Ban> list = fillterList(this.ds);
+            if (mode == 0)
+            {
                 foreach (Ban n in list)
                 {
                     this.uiFlowLayoutPanel1.Controls.Add(createCard(n, x + 10, y + 10));
                 }
+
+            }
+            else if (mode == 1)
+            {
+                foreach (Ban n in list)
+                {
+                    if (n.Tinhtrang == false)
+                        continue;
+                    this.uiFlowLayoutPanel1.Controls.Add(createCard(n, x + 10, y + 10));
+                }
+                UIButton close = new UIButton();
+                close.Text = "Hủy";
+                close.Font = new Font("Arial", 14.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+                close.Size = new Size(97, 50);
+                close.Location = new Point(10, 10);
+                close.BackColor = Color.Red;
+                close.Click += (s, ez) => this.Close();
+                this.uiFlowLayoutPanel1.Controls.Add(close);
+            }
 
         }
     }

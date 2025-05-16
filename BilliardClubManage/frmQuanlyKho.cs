@@ -88,5 +88,22 @@ namespace BilliardClubManage
             }
             dgvKho.DataSource = listRes;
         }
+
+        private void dgvKho_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvKho.Columns[e.ColumnIndex].Name == "clmPrice")
+            {
+                if (e.Value != null)
+                {
+                    string valueAsString = e.Value.ToString(); // Lấy giá trị dưới dạng chuỗi
+                    if (decimal.TryParse(valueAsString, out decimal numericValue))
+                    {
+                        // Định dạng giá trị số và thêm " VND"
+                        e.Value = numericValue.ToString("#,##0") + " VND";
+                        e.FormattingApplied = true;
+                    }
+                }
+            }
+        }
     }
 }
